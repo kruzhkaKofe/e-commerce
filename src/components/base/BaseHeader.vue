@@ -1,30 +1,26 @@
 <template>
-	<ion-header>
-		<ion-toolbar>
-			<ion-buttons slot="start">
-				<ion-menu-button class="menu__open-button"></ion-menu-button>
-			</ion-buttons>
-			<ion-buttons slot="end">
-				<ion-button>
-					<ion-icon
-						slot="icon-only"
-						:src="require('@/assets/icons/Search.svg')"
-					></ion-icon>
-				</ion-button>
-				<ion-button>
-					<ion-icon
-						slot="icon-only"
-						:src="require('@/assets/icons/shopping-bag.svg')"
-					></ion-icon>
-				</ion-button>
-			</ion-buttons>
-			<ion-img
-				class="logo"
-				:src="require('@/assets/icons/Logo.png')"
-				alt="logo"
-			></ion-img>
-		</ion-toolbar>
-	</ion-header>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button class="menu__open-button"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button>
+          <icon-search />
+        </ion-button>
+        <ion-button>
+          <icon-shoping-bag/>
+        </ion-button>
+      </ion-buttons>
+      <div class="wrapper-logo">
+        <ion-img
+          class="logo"
+          src="/assets/icons/Logo.png"
+          alt="logo"
+        ></ion-img>
+      </div>
+    </ion-toolbar>
+  </ion-header>
 </template>
 
 <script setup>
@@ -38,15 +34,28 @@ import {
   IonImg,
 } from "@ionic/vue";
 
-const props = defineProps({
-	background: String
-})
+import {IconSearch, IconShopingBag} from '@/components/icons/index.js'
 
+const props = defineProps({
+  background: String,
+});
 </script>
 
 <style lang="sass" scoped>
+ion-toolbar
+	--border-width: 0px
+	--border-style: none
+	--border-color: #FFFFFF
+
+.header-md::after
+	content: none
+
 .menu__open-button::part(icon)
-	content: url('@/assets/icons/Menu.svg')
+	content: url('/public/assets/icons/Menu.svg')
+
+.wrapper-logo
+	display: flex
+	justify-content: center
 
 .logo
 	width: 78px

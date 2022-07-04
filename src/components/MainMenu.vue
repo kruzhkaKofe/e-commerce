@@ -31,6 +31,8 @@ import {
   IonItem,
 } from "@ionic/vue";
 
+import {IconClose} from '@/components/icons/index.js'
+
 </script>
 
 <style lang="sass" scoped>
@@ -42,7 +44,7 @@ ion-menu
 
 .menu
 	&__close-button::part(icon)
-		content: url('@/assets/icons/Close.svg')
+		content: url('/public/assets/icons/Close.svg')
 
 
 </style>
