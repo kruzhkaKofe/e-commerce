@@ -27,5 +27,4 @@ export default defineComponent({
   font-family: 'Tenor Sans', sans-serif
   font-weight: 400
 
-
 </style>

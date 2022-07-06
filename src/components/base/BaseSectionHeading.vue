@@ -12,19 +12,15 @@ import { IconStick } from "@/components/icons/index";
 <style lang="sass" scoped>
 .base
 	&__header
-		padding: 20px 0
 		margin-bottom: 6px
 		display: flex
 		flex-direction: column
 	&__heading
-		display: inline-block
 		font-weight: 400
 		font-size: 18px
 		line-height: 40px
 		letter-spacing: 4px
 		text-transform: uppercase
-		// margin-bottom: 20px
-		
 	&__icon-stick
 		align-self: center
 		display: block
