@@ -72,7 +72,6 @@ const products = [
 <style lang="sass" scoped>
 .arrival
 	padding: 35px 0
-	background-color: #FFFFFF
 	color: black
 	text-align: center
 	border: none

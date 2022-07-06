@@ -58,7 +58,6 @@ const brands = [
 	flex-direction: column
 	align-items: center
 	padding: 15px 0
-	background-color: #FFFFFF
 	&__list
 		padding: 20px 0
 		display: flex

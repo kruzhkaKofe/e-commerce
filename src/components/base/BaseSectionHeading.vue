@@ -15,6 +15,7 @@ import { IconStick } from "@/components/icons/index";
 		margin-bottom: 6px
 		display: flex
 		flex-direction: column
+		text-align: center
 	&__heading
 		font-weight: 400
 		font-size: 18px

@@ -9,15 +9,11 @@
           <icon-search />
         </ion-button>
         <ion-button>
-          <icon-shoping-bag/>
+          <icon-shoping-bag />
         </ion-button>
       </ion-buttons>
       <div class="wrapper-logo">
-        <ion-img
-          class="logo"
-          src="/assets/icons/Logo.png"
-          alt="logo"
-        ></ion-img>
+        <ion-img class="logo" src="/assets/icons/Logo.png" alt="logo"></ion-img>
       </div>
     </ion-toolbar>
   </ion-header>
@@ -34,7 +30,7 @@ import {
   IonImg,
 } from "@ionic/vue";
 
-import {IconSearch, IconShopingBag} from '@/components/icons/index.js'
+import { IconSearch, IconShopingBag } from "@/components/icons/index.js";
 
 const props = defineProps({
   background: String,
@@ -46,17 +42,13 @@ ion-toolbar
 	--border-width: 0px
 	--border-style: none
 	--border-color: #FFFFFF
-
 .header-md::after
 	content: none
-
 .menu__open-button::part(icon)
 	content: url('/public/assets/icons/Menu.svg')
-
 .wrapper-logo
 	display: flex
 	justify-content: center
-
 .logo
 	width: 78px
 	height: 31px

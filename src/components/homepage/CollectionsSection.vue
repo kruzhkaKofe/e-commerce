@@ -25,7 +25,6 @@
 <style lang="sass" scoped>
 .collection 
 	padding: 20px 0
-	background-color: #FFFFFF
 	display: flex
 	flex-direction: column
 	align-items: center

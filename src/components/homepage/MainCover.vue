@@ -54,6 +54,7 @@ const modules = [Pagination];
     text-transform: uppercase
     color: #333333
     opacity: 0.7
+    mix-blend-mode: multiply
     &__item
       font-family: 'Bodoni Moda', serif
     &__item:first-child
