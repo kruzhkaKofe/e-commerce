@@ -4,3 +4,6 @@ export { default as IconStick } from "./icon.stick.vue";
 export { default as IconShopingBag } from "./icon.shoping-bag.vue";
 export { default as IconForwardArrow } from "./icon.forward-arrow.vue";
 export { default as IconInstagram } from "./icon.instagram.vue";
+export { default as IconInstagramDark } from "./icon.instagram-dark.vue";
+export { default as IconYoutubeDark } from "./icon.youtube-dark.vue";
+export { default as IconTwitterDark } from "./icon.twitter-dark.vue";

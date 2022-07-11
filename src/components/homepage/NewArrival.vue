@@ -76,6 +76,7 @@ const products = [
 	text-align: center
 	border: none
 	&__tab-bar
+		--background: #FFFFFF
 		--border: none
 		--color: rgba(136, 136, 136, 0.8)
 		margin-bottom: 10px
@@ -92,9 +93,9 @@ const products = [
 		margin-bottom: 15px
 	&__explore-button
 		--color: black
-		--ripple-color: #DD8560
 		font-size: 16px
 		line-height: 24px
+		--ripple-color: #DD8560
 		&__icon
 			margin-left: 8px
 </style>
