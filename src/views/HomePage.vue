@@ -10,6 +10,7 @@
       <recommendation-list :recs="recs"></recommendation-list>
       <trands-list :trands="trands"></trands-list>
       <our-advantages></our-advantages>
+      <follow-us></follow-us>
     </ion-content>
   </ion-page>
 </template>
@@ -35,6 +36,7 @@ import CollectionsSection from "@/components/homepage/CollectionsSection.vue";
 import RecommendationList from "@/components/homepage/RecommendationList.vue";
 import TrandsList from "@/components/homepage/TrandsList.vue";
 import OurAdvantages from "@/components/homepage/OurAdvantages.vue";
+import FollowUs from "@/components/homepage/FollowUs.vue";
 
 const recs = [
   {

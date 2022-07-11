@@ -76,7 +76,6 @@ const products = [
 	text-align: center
 	border: none
 	&__tab-bar
-		--background: #FFFFFF
 		--border: none
 		--color: rgba(136, 136, 136, 0.8)
 		margin-bottom: 10px
@@ -87,7 +86,6 @@ const products = [
 		--color-selected: #212806
 		--ripple-color: #DD8560
 	&__list
-		background-color: #FFFFFF
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-around
