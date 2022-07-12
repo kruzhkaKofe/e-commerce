@@ -1,11 +1,12 @@
 <template>
   <section class="arrival">
     <base-section-heading>New Arrival</base-section-heading>
-    <ion-tab-bar class="arrival__tab-bar">
+    <ion-tab-bar class="arrival__tab-bar" >
       <ion-tab-button
         v-for="(tab, i) in tabs"
         :key="i"
         class="arrival__tab-button"
+				:tab="tab"
       >
         <ion-label>
           {{ tab }}
@@ -78,12 +79,12 @@ const products = [
 	&__tab-bar
 		--background: #FFFFFF
 		--border: none
-		--color: rgba(136, 136, 136, 0.8)
 		margin-bottom: 10px
 	&__tab-button
 		font-size: 14px
 		line-height: 106%
 		letter-spacing: 1px
+		--color: rgba(136, 136, 136, 0.8)
 		--color-selected: #212806
 		--ripple-color: #DD8560
 	&__list

@@ -1,13 +1,14 @@
 <template>
   <div class="recommendation">
     <base-section-heading>Just for you</base-section-heading>
-
     <swiper
       class="recommendation__slider"
       :slidesPerView="'auto'"
       :spaceBetween="15"
       :modules="modules"
-      :pagination="pagination"
+      :pagination="{
+				el: '.recommendation__pagination',
+			}"
     >
       <swiper-slide
         v-for="rec in recs"
@@ -38,13 +39,6 @@ import { IonImg } from "@ionic/vue";
 import BaseSectionHeading from "@/components/base/BaseSectionHeading";
 
 const modules = [Pagination];
-
-const pagination = {
-	el: '.recommendation__pagination',
-	renderBullet: function (index, className) {
-		return `<span class="swiper-pagination-bullet"></span>`;
-	},
-}
 
 const props = defineProps({
   recs: Array,
@@ -78,5 +72,15 @@ const props = defineProps({
 		display: flex
 		align-items: center
 		justify-content: center
+
+:deep(.swiper-pagination-bullet)
+	width: 6px
+	height: 6px
+	border: 0.5px solid #888888
+	background-color: #FFFFFF
+	border-radius: 0
+	transform: rotate(45deg)
+:deep(.swiper-pagination-bullet-active)
+	background-color: #888888
 
 </style>

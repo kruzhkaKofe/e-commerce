@@ -8,6 +8,9 @@
 			</ion-toolbar>
 		</ion-header>
 		<ion-content>
+			<ion-tab-bar>
+				
+			</ion-tab-bar>
 			<ion-list>
 				<ion-item>1</ion-item>
 				<ion-item>2</ion-item>
@@ -29,6 +32,8 @@ import {
   IonContent,
   IonList,
   IonItem,
+	IonTabBar,
+	IonTabButton,
 } from "@ionic/vue";
 
 import {IconClose} from '@/components/icons/index.js'

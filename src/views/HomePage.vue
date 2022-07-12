@@ -30,7 +30,7 @@ import {
 } from "@ionic/vue";
 import BaseHeader from "@/components/base/BaseHeader.vue";
 import BaseFooter from "@/components/base/BaseFooter.vue";
-import MainMenu from "@/components/MainMenu.vue";
+import MainMenu from "@/components/base/MainMenu.vue";
 import MainCover from "@/components/homepage/MainCover.vue";
 import NewArrival from "@/components/homepage/NewArrival.vue";
 import BrandsList from "@/components/homepage/BrandsList.vue";

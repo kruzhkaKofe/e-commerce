@@ -1,11 +1,11 @@
 <template>
-  <swiper
-    class="cover"
-    :modules="modules"
+  <swiper 
+    class="cover" 
+    :modules="modules" 
     :pagination="{
       el: '.cover__pagination',
     }"
-  >
+    >
     <swiper-slide v-for="n in 3" :key="n" class="cover__item">
       <div class="cover__title">
         <span class="cover__title__item">Luxury</span>
@@ -28,6 +28,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const modules = [Pagination];
+
 </script>
 
 <style lang="sass" scoped>
@@ -92,14 +93,13 @@ const modules = [Pagination];
   &__pagination
     display: flex
     justify-content: center
-.swiper-pagination-bullet
+:deep(.swiper-pagination-bullet)
   width: 6px
   height: 6px
   border: 0.5px solid #FCFCFC
+  background-color: transparent
   border-radius: 0
   transform: rotate(45deg)
-  & + &
-    margin-left: 10px
-  &-active
-    background: #FCFCFC
+:deep(.swiper-pagination-bullet-active)
+  background-color: #FCFCFC
 </style>
