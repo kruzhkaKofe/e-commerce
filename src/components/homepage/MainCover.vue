@@ -93,6 +93,7 @@ const modules = [Pagination];
   &__pagination
     display: flex
     justify-content: center
+
 :deep(.swiper-pagination-bullet)
   width: 6px
   height: 6px
@@ -100,6 +101,7 @@ const modules = [Pagination];
   background-color: transparent
   border-radius: 0
   transform: rotate(45deg)
+  
 :deep(.swiper-pagination-bullet-active)
   background-color: #FCFCFC
 </style>

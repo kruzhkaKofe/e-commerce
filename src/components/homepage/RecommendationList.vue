@@ -2,7 +2,7 @@
   <div class="recommendation">
     <base-section-heading>Just for you</base-section-heading>
     <swiper
-      class="recommendation__slider"
+      class="recommendation__swiper"
       :slidesPerView="'auto'"
       :spaceBetween="15"
       :modules="modules"
@@ -48,7 +48,7 @@ const props = defineProps({
 <style lang="sass" scoped>
 .recommendation
 	padding: 30px 0
-	&__slider
+	&__swiper
 		padding: 20px 0
 		padding-left: 15px
 	&__item
@@ -80,6 +80,7 @@ const props = defineProps({
 	background-color: #FFFFFF
 	border-radius: 0
 	transform: rotate(45deg)
+
 :deep(.swiper-pagination-bullet-active)
 	background-color: #888888
 

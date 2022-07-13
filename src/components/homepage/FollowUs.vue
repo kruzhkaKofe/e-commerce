@@ -1,9 +1,9 @@
 <template>
   <section class="follow">
-    <h2 class="follow__heading">Follow us</h2>
+    <base-section-heading :stick="false">Follow Us</base-section-heading>
     <router-link class="follow__link" to="/#">
-			<icon-instagram></icon-instagram>
-		</router-link>
+      <icon-instagram></icon-instagram>
+    </router-link>
     <div class="follow__links-container">
       <router-link
         class="follow__item"
@@ -16,7 +16,7 @@
           :src="link.image"
           alt="link-image"
         ></ion-img>
-        <span class="follow__item__link">{{ link.path }}</span>
+        <div class="follow__item__link">{{ link.path }}</div>
       </router-link>
     </div>
   </section>
@@ -25,6 +25,7 @@
 <script setup>
 import { IconInstagram } from "@/components/icons/index";
 import { IonImg } from "@ionic/vue";
+import BaseSectionHeading from "@/components/base/BaseSectionHeading";
 
 const links = [
   {
@@ -56,12 +57,8 @@ const links = [
 	flex-direction: column
 	align-items: center
 	padding: 20px 17px
-	&__heading
-		font-size: 18px
-		line-height: 40px
-		letter-spacing: 4px
-		text-transform: uppercase
 	&__link
+		margin-top: -15px
 		width: 24px
 		height: 24px
 		display: flex
@@ -86,8 +83,14 @@ const links = [
 			height: 164px
 		&__link
 			position: absolute
-			bottom: 12px
-			left: 10px
+			display: flex
+			align-items: center
+			padding: 0 9px
+			background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%)
+			width: 100%
+			height: 40px
+			bottom: 0
+			left: 0
 			font-size: 14px
 			line-height: 16px
 			letter-spacing: 1px

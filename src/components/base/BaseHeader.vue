@@ -42,6 +42,8 @@ ion-toolbar
 	--border-width: 0px
 	--border-style: none
 	--border-color: #FFFFFF
+	--background: #FFFFFF
+
 .header-md::after
 	content: none
 .menu__open-button::part(icon)

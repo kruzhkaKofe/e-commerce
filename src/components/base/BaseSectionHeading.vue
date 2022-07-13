@@ -1,12 +1,21 @@
 <template>
 	<div class="base__header">
-		<h2 class="base__heading"><slot></slot></h2>
-		<icon-stick class="base__icon-stick"/>
+		<h2 class="base__heading">
+			<slot></slot>
+		</h2>
+		<icon-stick v-if="stick" class="base__icon-stick"/>
 	</div>
 </template>
 
 <script setup>
 import { IconStick } from "@/components/icons/index";
+
+const props = defineProps({
+	stick:{
+		type: Boolean,
+		default: true,
+	}
+})
 </script>
 
 <style lang="sass" scoped>
@@ -16,6 +25,7 @@ import { IconStick } from "@/components/icons/index";
 		display: flex
 		flex-direction: column
 		text-align: center
+		margin-bottom: 20px
 	&__heading
 		font-weight: 400
 		font-size: 18px

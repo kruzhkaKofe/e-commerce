@@ -11,11 +11,7 @@
 
 <script setup>
 import {IonPage, IonContent} from '@ionic/vue'
-import BaseHeader from "@/components/base/BaseHeader"
-import BaseFooter from "@/components/base/BaseFooter"
-import BaseMainMenu from "@/components/base/BaseMainMenu.vue";
+import BaseHeader from "./BaseHeader"
+import BaseFooter from "./BaseFooter"
+import BaseMainMenu from "./BaseMainMenu.vue";
 </script>
-
-<style lang="sass" scoped>
-
-</style>

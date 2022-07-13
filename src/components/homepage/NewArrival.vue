@@ -18,12 +18,12 @@
         v-for="product in products"
         :key="product.id"
         :product="product"
-      ></product-item>
+      >
+      </product-item>
     </div>
-    <ion-button class="arrival__explore-button" fill="clear"
-      >Explore more<icon-forward-arrow
-        class="arrival__explore-button__icon"
-      ></icon-forward-arrow>
+    <ion-button class="arrival__explore-button" fill="clear">
+      Explore more
+      <icon-forward-arrow class="arrival__explore-button__icon"></icon-forward-arrow>
     </ion-button>
   </section>
 </template>

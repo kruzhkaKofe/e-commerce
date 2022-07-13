@@ -7,3 +7,5 @@ export { default as IconInstagram } from "./icon.instagram.vue";
 export { default as IconInstagramDark } from "./icon.instagram-dark.vue";
 export { default as IconYoutubeDark } from "./icon.youtube-dark.vue";
 export { default as IconTwitterDark } from "./icon.twitter-dark.vue";
+export { default as IconBookmark } from "./icon.bookmark.vue";
+export { default as IconPlus } from "./icon.plus.vue";

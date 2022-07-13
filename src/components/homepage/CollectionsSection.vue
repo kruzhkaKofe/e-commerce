@@ -1,6 +1,6 @@
 <template>
 	<section class="collection">
-		<h2 class="collection__heading">Collections</h2>
+		<base-section-heading :stick="false">Collections</base-section-heading>
 		<div class="collection__october collection__block">
 			<span class="october__number">10</span>
 			<div class="october__title">
@@ -20,6 +20,7 @@
 </template>
 
 <script setup>
+import BaseSectionHeading from "@/components/base/BaseSectionHeading"
 </script>
 
 <style lang="sass" scoped>
@@ -30,13 +31,6 @@
 	align-items: center
 	&__block 
 		margin-bottom: 40px
-	&__heading
-		margin-bottom: 20px
-		font-size: 18px
-		line-height: 40px
-		letter-spacing: 4px
-		text-transform: uppercase
-		color: #000000
 	&__october
 		width: 100vw
 		height: 245px
@@ -51,6 +45,7 @@
 		padding-left: 60px
 	&__video
 		width: 100vw
+
 .october	 
 	&__number
 		position: absolute
@@ -89,6 +84,7 @@
 				font-weight: 700
 				font-size: 42px
 				line-height: 63px
+				
 .autumn
 	&__title
 		display: flex

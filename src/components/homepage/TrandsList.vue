@@ -1,6 +1,6 @@
 <template>
   <section class="trands">
-    <h2 class="trands__heading">@Trandings</h2>
+		<base-section-heading :stick="false">@Trandings</base-section-heading>
     <div class="trands__chips">
       <ion-chip class="trands__chip" v-for="(trand, i) in trands" :key="i">
         <ion-label class="trands__chip__label">{{ trand }}</ion-label>
@@ -11,6 +11,7 @@
 
 <script setup>
 import { IonChip, IonLabel } from "@ionic/vue";
+import BaseSectionHeading from "@/components/base/BaseSectionHeading"
 
 const props = defineProps({
   trands: Array,
@@ -23,12 +24,6 @@ const props = defineProps({
 	display: flex
 	flex-direction: column
 	align-items: center
-	&__heading
-		font-size: 18px
-		line-height: 40px
-		letter-spacing: 4px
-		text-transform: uppercase
-		margin-bottom: 20px
 	&__chips
 		display: flex
 		padding: 0 16px
