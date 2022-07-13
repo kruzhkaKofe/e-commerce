@@ -32,28 +32,9 @@
 import { IonImg } from "@ionic/vue";
 import { IconStick } from "@/components/icons/index";
 
-const advantages = [
-  {
-    id: 1,
-    image: "/assets/homepage/advantages/Fast-shipping.png",
-    description: "Fast shipping. Free on orders over $25.",
-  },
-  {
-    id: 2,
-    image: "/assets/homepage/advantages/Sustainable.png",
-    description: "Sustainable process from start to finish.",
-  },
-  {
-    id: 3,
-    image: "/assets/homepage/advantages/Unique-design.png",
-    description: "Unique designs and high-quality materials.",
-  },
-  {
-    id: 4,
-    image: "/assets/homepage/advantages/Heart-crown.png",
-    description: "Fast shipping. Free on orders over $25.",
-  },
-];
+const props = defineProps({
+  advantages: Array,
+})
 </script>
 
 <style lang="sass" scoped>

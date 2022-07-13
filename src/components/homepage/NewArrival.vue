@@ -91,7 +91,7 @@ const products = [
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-around
-		margin-bottom: 15px
+		margin-bottom: 28px
 	&__explore-button
 		--color: black
 		font-size: 16px

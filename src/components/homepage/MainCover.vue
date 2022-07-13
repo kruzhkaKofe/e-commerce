@@ -87,7 +87,6 @@ const modules = [Pagination];
     --border-radius: 30px
     --transition: .4s
     margin-bottom: 14px
-    --background-activated: #DD8560
     &::part(native)
       backdrop-filter: blur(4px)
   &__pagination

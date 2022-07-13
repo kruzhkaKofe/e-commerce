@@ -27,28 +27,10 @@ import { IconInstagram } from "@/components/icons/index";
 import { IonImg } from "@ionic/vue";
 import BaseSectionHeading from "@/components/base/BaseSectionHeading";
 
-const links = [
-  {
-    id: 1,
-    image: "/assets/homepage/follow/first.jpg",
-    path: "@mia",
-  },
-  {
-    id: 2,
-    image: "/assets/homepage/follow/second.jpg",
-    path: "@_jihyn",
-  },
-  {
-    id: 3,
-    image: "/assets/homepage/follow/third.jpg",
-    path: "@mia",
-  },
-  {
-    id: 4,
-    image: "/assets/homepage/follow/fourth.jpg",
-    path: "@_jihyn",
-  },
-];
+const props = defineProps({
+	links: Array
+})
+
 </script>
 
 <style lang="sass" scoped>

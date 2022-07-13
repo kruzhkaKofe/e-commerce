@@ -1,5 +1,5 @@
 <template>
-  <ion-item class="item">
+  <ion-item class="item" :router-link="`/blog/${blog.id}`">
     <div class="item__cover">
       <ion-img class="item__image" :src="blog.image" :alt="blog.id"></ion-img>
       <div class="item__title">

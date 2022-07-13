@@ -52,6 +52,8 @@ a
 	display: flex
 	flex-direction: column
 	align-items: center
+	&::before
+		height: 0
 	&__socials
 		width: 162px
 		display: flex

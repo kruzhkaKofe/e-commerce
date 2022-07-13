@@ -15,6 +15,10 @@ const routes = [
     path: "/blog",
     component: BlogPage,
   },
+  {
+    path: "/blog/:id",
+    component:() => import('@/views/BlogDetails'),
+  },
 ];
 
 const router = createRouter({

@@ -15,53 +15,12 @@ import BaseSectionHeading from "@/components/base/BaseSectionHeading";
 import TagsList from "./TagsList.vue";
 import BlogList from "./BlogList.vue";
 import { IonButton } from "@ionic/vue";
-import { IconPlus } from "@/components/icons/index";
+import { IconPlus } from "@/components/icons/index"
 
-const tags = [
-  "Fashion",
-  "Promo",
-  "Policy",
-  "Lookbook",
-  "Sale",
-  "Tips",
-  "Fashion",
-  "Promo",
-  "Policy",
-  "Lookbook",
-  "Sale",
-  "Tips",
-];
-
-const blogs = [
-  {
-    id: 1,
-    title: "2021 Style Guide: The Biggest Fall Trends",
-    image: "/assets/blogpage/guy.jpg",
-    tags: ["#Fashion", "#Tips"],
-    date: "4 days ago",
-  },
-  {
-    id: 2,
-    title: "2021 Style Guide: The Biggest Fall Trends",
-    image: "/assets/blogpage/jacket.jpg",
-    tags: ["#Fashion", "#Tips"],
-    date: "4 days ago",
-  },
-  {
-    id: 3,
-    title: "2021 Style Guide: The Biggest Fall Trends",
-    image: "/assets/blogpage/boots.jpg",
-    tags: ["#Fashion", "#Tips"],
-    date: "4 days ago",
-  },
-  {
-    id: 4,
-    title: "2021 Style Guide: The Biggest Fall Trends",
-    image: "/assets/blogpage/suit.jpg",
-    tags: ["#Fashion", "#Tips"],
-    date: "4 days ago",
-  },
-];
+const props = defineProps({
+  blogs: Array,
+  tags: Array,
+})
 </script>
 
 <style lang="sass" scoped>
