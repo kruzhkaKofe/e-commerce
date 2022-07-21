@@ -1,6 +1,6 @@
 <template>
   <ion-item class="item" :router-link="`/blog/${blog.id}`">
-    <div class="item__cover">
+    <div class="item__cover" >
       <ion-img class="item__image" :src="blog.image" :alt="blog.id"></ion-img>
       <div class="item__title">
         <h3 class="item__title__text">{{ blog.title }}</h3>
@@ -9,7 +9,7 @@
 				<icon-bookmark class="item__bookmark" />
 			</ion-checkbox>
     </div>
-    <div class="item__info">
+    <div class="item__info" @click.prevent>
       <div class="item__tags">
         <ion-chip class="item__chip" v-for="(tag, i) in blog.tags" :key="i">
           <ion-label>{{ tag }}</ion-label>
@@ -79,14 +79,19 @@ const props = defineProps({
 		font-size: 12px
 		line-height: 20px
 		color: #888888
+	&__tags
+		max-width: 265px
+		max-height: 70px
+		overflow: hidden
 	&__chip
+		margin-bottom: 3px
 		padding: 2px 6px
 		border: 1px solid #F5F5F5
 		--color: #888888
 		--background: transparent
-		& + &
-			margin-left: 10px
-
+		margin-right: 5px
+		&:last-child
+			margin-right: 0
 // .favourite :deep(.item__bookmark) path
 // 	fill: #DD8560
 // 	stroke: #DD8560

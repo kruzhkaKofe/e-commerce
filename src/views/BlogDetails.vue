@@ -1,5 +1,5 @@
 <template>
-	<base-layout>
+	<base-layout page-default-back-link="/blog">
 		<blog-overview :blog="loadedBlog"></blog-overview>
 	</base-layout>
 </template>

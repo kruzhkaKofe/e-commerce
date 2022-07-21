@@ -1,5 +1,5 @@
 <template>
-  <base-layout>
+  <base-layout page-default-back-link="/home">
     <blog-section
       :blogs="blogs"
       :tags="tags"

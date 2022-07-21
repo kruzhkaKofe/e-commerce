@@ -17,7 +17,7 @@ const routes = [
   },
   {
     path: "/blog/:id",
-    component:() => import('@/views/BlogDetails'),
+    component: () => import("@/views/BlogDetails"),
   },
 ];
 

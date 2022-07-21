@@ -1,10 +1,12 @@
 <template>
-  <ion-menu side="start">
+  <ion-menu side="start" content-id="menu" menu-id="first">
     <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-menu-button class="menu__close-button"></ion-menu-button>
-        </ion-buttons>
+      <ion-toolbar class="toolbar">
+        <ion-menu-toggle slot="start" menu="first">
+          <ion-button class="close-button">
+            <icon-close></icon-close>
+          </ion-button>
+        </ion-menu-toggle>
       </ion-toolbar>
     </ion-header>
     <ion-content>
@@ -29,7 +31,8 @@ import {
   IonHeader,
   IonToolbar,
   IonButtons,
-  IonMenuButton,
+  IonButton,
+  IonMenuToggle,
   IonMenu,
   IonContent,
   IonList,
@@ -45,15 +48,10 @@ const genders = ["Women", "Man", "Kids"];
 </script>
 
 <style lang="sass" scoped>
-ion-toolbar,
+ion-header::after
+	height: 0
+
 ion-tab-bar
 	--background: #FFFFFF
-
-ion-menu
-	--width: 100%
-
-.menu
-	&__close-button::part(icon)
-		content: url('/public/assets/icons/Close.svg')
 
 </style>

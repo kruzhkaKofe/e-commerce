@@ -1,6 +1,6 @@
 <template>
   <ion-list class="list">
-    <blog-item v-for="blog in blogs" :key="blog.id" :blog="blog" :slot="``"></blog-item>
+    <blog-item v-for="blog in blogs" :key="blog.id" :blog="blog"></blog-item>
   </ion-list>
 </template>
 
