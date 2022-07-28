@@ -36,11 +36,17 @@ const numOfCollection = computed(() => {
 <style lang="sass" scoped>
 .collection
 	--background: #000000
+	--inner-padding-end: 0
+	--inner-border-width: 0
+	--highlight-height: 0
 
 	&::part(native)
 		display: flex
 		flex-direction: column
-		align-items: center
+		padding: 0
+
+	&__cover
+		width: 100%
 
 	&__footer
 		width: 100%
