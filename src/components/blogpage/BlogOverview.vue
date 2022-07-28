@@ -36,21 +36,25 @@ const props = defineProps({
 		padding: 16px
 		font-size: 14px
 		line-height: 24px
+
 	&__title
 		font-size: 14px
 		line-height: 22px
 		text-transform: uppercase
 		margin-bottom: 10px
+
 	&__text_before,
 	&__text_after
 		color: #333333
 		text-align: justify
+
 	&__info
 		color: #555555
 		margin-top: 30px
 		margin-bottom: 10px
 		display: flex
 		align-items: center
+		
 	&__author
 		padding-right: 10px
 		border-right: 1px solid #555555

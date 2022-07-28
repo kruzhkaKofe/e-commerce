@@ -35,18 +35,23 @@ const props = defineProps({
 	--inner-border-width: 0
 	width: 343px
 	margin-bottom: 28px
+	
 	&:last-child
 		margin-bottom: 0
+
 	&::part(native)
 		padding: 0
 		display: flex
 		flex-direction: column
+
 	&__cover,
 	&__image
 		width: 343px
 		height: 200px
+
 	&__cover
 		position: relative
+
 	&__title
 		position: absolute
 		width: 100%
@@ -58,10 +63,12 @@ const props = defineProps({
 		text-transform: uppercase
 		color: #FCFCFC
 		background: linear-gradient(360deg, #111111 0%, rgba(17, 17, 17, 0.991353) 6.6%, rgba(17, 17, 17, 0.96449) 13.19%, rgba(17, 17, 17, 0.91834) 19.79%, rgba(17, 17, 17, 0.852589) 26.38%, rgba(17, 17, 17, 0.768225) 32.98%, rgba(17, 17, 17, 0.668116) 39.57%, rgba(17, 17, 17, 0.557309) 46.17%, rgba(17, 17, 17, 0.442691) 52.77%, rgba(17, 17, 17, 0.331884) 59.36%, rgba(17, 17, 17, 0.231775) 65.96%, rgba(17, 17, 17, 0.147411) 72.55%, rgba(17, 17, 17, 0.0816599) 79.15%, rgba(17, 17, 17, 0.03551) 85.74%, rgba(17, 17, 17, 0.0086472) 92.34%, rgba(17, 17, 17, 0) 98.94%)
+		
 		&__text
 			font-size: 14px
 			line-height: 20px
 			letter-spacing: 2px
+
 	&__add-favourite
 		position: absolute
 		top: 13px
@@ -70,6 +77,7 @@ const props = defineProps({
 		--border-width: 0
 		--background-hover: transparent
 		--background-checked: #DD8560
+
 	&__info
 		width: 100%
 		display: flex
@@ -79,10 +87,12 @@ const props = defineProps({
 		font-size: 12px
 		line-height: 20px
 		color: #888888
+
 	&__tags
 		max-width: 265px
 		max-height: 70px
 		overflow: hidden
+
 	&__chip
 		margin-bottom: 3px
 		padding: 2px 6px
@@ -90,8 +100,10 @@ const props = defineProps({
 		--color: #888888
 		--background: transparent
 		margin-right: 5px
+
 		&:last-child
 			margin-right: 0
+			
 // .favourite :deep(.item__bookmark) path
 // 	fill: #DD8560
 // 	stroke: #DD8560

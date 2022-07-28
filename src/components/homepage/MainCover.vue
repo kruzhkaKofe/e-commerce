@@ -39,7 +39,7 @@ const modules = [Pagination];
   &__item
     height: 100%
     width: 100%
-    background: url('/public/assets/Main-background.jpg') no-repeat center
+    background: url('/public/assets/homepage/cover/main-cover.jpg') no-repeat center
     display: flex
     align-items: center
     justify-content: center

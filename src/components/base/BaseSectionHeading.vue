@@ -20,18 +20,21 @@ const props = defineProps({
 
 <style lang="sass" scoped>
 .base
+	
 	&__header
 		margin-bottom: 6px
 		display: flex
 		flex-direction: column
 		text-align: center
 		margin-bottom: 20px
+
 	&__heading
 		font-weight: 400
 		font-size: 18px
 		line-height: 40px
 		letter-spacing: 4px
 		text-transform: uppercase
+
 	&__icon-stick
 		align-self: center
 		display: block

@@ -28,9 +28,6 @@ export const useHomeStore = defineStore('home', {
 				image: "/assets/homepage/recs/item.jpg",
 			},
 		],
-		
-		
-
 
 	}),
 	

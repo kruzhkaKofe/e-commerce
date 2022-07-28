@@ -2,7 +2,9 @@
   <ion-header>
     <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-menu-button class="menu__open-button" menu="first"></ion-menu-button>
+        <ion-menu-button class="menu__open-button" menu="first">
+          <icon-menu />
+        </ion-menu-button>
       </ion-buttons>
       <div class="wrapper-logo">
         <ion-img class="logo" src="/assets/icons/Logo.png" alt="logo"></ion-img>
@@ -12,7 +14,9 @@
           <icon-search />
         </ion-button>
         <ion-button>
-          <ion-menu-button class="cart__open-button" menu="second"></ion-menu-button>
+          <ion-menu-button class="cart__open-button" menu="second">
+            <icon-shopping-bag />
+          </ion-menu-button>
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
@@ -29,7 +33,11 @@ import {
   IonImg,
 } from "@ionic/vue";
 
-import { IconSearch } from "@/components/icons/index.js";
+import {
+  IconSearch,
+  IconShoppingBag,
+  IconMenu,
+} from "@/components/icons/index.js";
 </script>
 
 <style lang="sass" scoped>
@@ -48,10 +56,10 @@ ion-button
 	content: none
 
 .menu__open-button::part(icon)
-	content: url('/public/assets/icons/Menu.svg')
+	content: ''
 
 .cart__open-button::part(icon)
-	content: url('/public/assets/icons/shopping-bag.svg')
+	content: ''
 
 .wrapper-logo
 	display: flex

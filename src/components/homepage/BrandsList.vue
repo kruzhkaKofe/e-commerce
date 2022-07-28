@@ -2,11 +2,11 @@
   <div class="brands">
     <icon-stick class="brands__stick"></icon-stick>
     <div class="brands__list">
-      <brand-item 
-				v-for="brand in brands" 
-				:key="brand.id" 
-				:brand="brand"
-			></brand-item>
+      <brand-item
+        v-for="brand in brands"
+        :key="brand.id"
+        :brand="brand"
+      ></brand-item>
     </div>
     <icon-stick class="brands__stick"></icon-stick>
   </div>

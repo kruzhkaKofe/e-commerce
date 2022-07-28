@@ -52,27 +52,33 @@ a
 	display: flex
 	flex-direction: column
 	align-items: center
+	
 	&::before
 		height: 0
+
 	&__socials
 		width: 162px
 		display: flex
 		align-items: center
 		justify-content: space-between
 		margin-bottom: 25px
+		
 		&__link
 			display: flex
 			align-items: center
 			justify-content: center
 			width: 24px
 			height: 24px
+			
 	&__contacts
 		display: flex
 		flex-direction: column
 		align-items: center
 		margin: 18px 0
+
 		&__item
 			line-height: 184%
+
 	&__nav
 		margin: 25px 0px
 		padding: 0px 70px
@@ -80,9 +86,11 @@ a
 		display: flex
 		align-items: center
 		justify-content: space-between
+
 		&__link
 			line-height: 24px
 	&__copyright
+
 		width: 100%
 		text-align: center
 		padding: 10px 70px
