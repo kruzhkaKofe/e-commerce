@@ -1,14 +1,14 @@
 <template>
   <section class="arrival">
     <base-section-heading>New Arrival</base-section-heading>
-    <ion-tab-bar class="arrival__tab-bar" >
+    <ion-tab-bar class="arrival__tab-bar">
       <ion-tab-button
+        class="arrival__tab-button"
         v-for="(tab, i) in tabs"
         :key="i"
-        class="arrival__tab-button"
-				:tab="tab"
+        :tab="tab"
       >
-        <ion-label>
+        <ion-label class="arrival__tab-label">
           {{ tab }}
         </ion-label>
       </ion-tab-button>
@@ -23,7 +23,9 @@
     </div>
     <ion-button class="arrival__explore-button" fill="clear">
       Explore more
-      <icon-forward-arrow class="arrival__explore-button__icon"></icon-forward-arrow>
+      <icon-forward-arrow
+        class="arrival__explore-button__icon"
+      ></icon-forward-arrow>
     </ion-button>
   </section>
 </template>
@@ -39,6 +41,7 @@ import {
 import BaseSectionHeading from "@/components/base/BaseSectionHeading";
 import ProductItem from "@/components/homepage/ProductItem";
 import { IconForwardArrow } from "@/components/icons/index";
+import { ref } from "vue";
 
 const tabs = ["All", "Apparel", "Dress", "Tshirt", "Bag"];
 
@@ -87,6 +90,10 @@ const products = [
 		--color: rgba(136, 136, 136, 0.8)
 		--color-selected: #212806
 		--ripple-color: #DD8560
+	&__tab-label
+		display: flex
+		align-items: center
+		height: 100%
 	&__list
 		display: flex
 		flex-wrap: wrap

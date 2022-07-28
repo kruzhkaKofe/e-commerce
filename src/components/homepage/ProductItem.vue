@@ -23,6 +23,7 @@ const props = defineProps({
 <style lang="sass" scoped>
 .item
 	width: 165px
+	height: 265px
 	margin-bottom: 12px
 	&:nth-last-child(-n+2)
 		margin-bottom: 0
@@ -30,6 +31,7 @@ const props = defineProps({
 		height: 200px
 		width: 165px
 	&__description
+		height: calc( 265px - 200px )
 		padding-top: 3px
 		text-align: center
 		display: flex

@@ -1,7 +1,7 @@
 <template>
-	<base-layout page-default-back-link="/blog">
-		<blog-overview :blog="loadedBlog"></blog-overview>
-	</base-layout>
+  <base-layout page-default-back-link="/blog">
+    <blog-overview :blog="loadedBlog"></blog-overview>
+  </base-layout>
 </template>
 
 <script setup>
@@ -12,14 +12,10 @@ import { useRoute } from "vue-router";
 import { ref } from "@vue/reactivity";
 
 const store = useBlogsStore();
-const route = useRoute()
-const blogId = ref(route.params.id)
+const route = useRoute();
+const blogId = ref(route.params.id);
 
-const loadedBlog = store.getBlogById(blogId.value)
- 
-
+const loadedBlog = store.getBlogById(blogId.value);
 </script>
 
-<style lang="sass" scoped>
-
-</style>
+<style lang="sass" scoped></style>

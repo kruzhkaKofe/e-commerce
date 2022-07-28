@@ -3,7 +3,7 @@
     <ion-toolbar>
       <ion-buttons slot="start">
         <ion-menu-button class="menu__open-button" menu="first">
-          <icon-menu />
+          <icon-menu class="icon-search"/>
         </ion-menu-button>
       </ion-buttons>
       <div class="wrapper-logo">
@@ -11,11 +11,11 @@
       </div>
       <ion-buttons slot="end">
         <ion-button>
-          <icon-search />
+          <icon-search class="icon-search" />
         </ion-button>
         <ion-button>
           <ion-menu-button class="cart__open-button" menu="second">
-            <icon-shopping-bag />
+            <icon-shopping-bag class="icon-shopping-bag"/>
           </ion-menu-button>
         </ion-button>
       </ion-buttons>
