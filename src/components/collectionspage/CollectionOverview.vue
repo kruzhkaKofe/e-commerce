@@ -6,7 +6,7 @@
       :alt="collection.title"
     />
     <collection-products-list class="section__list" :collection="collection" />
-    <collection-may-like :otherCollections="otherCollections"/>
+    <collection-may-like :otherCollections="otherCollections" />
   </base-october-section>
 </template>
 

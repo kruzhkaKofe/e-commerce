@@ -37,7 +37,7 @@
       <div class="check">
         <div class="check__description">
           Sub total
-          <span class="check__amount">${{ amount }}</span>
+          <span class="check__amount">${{ fullAmount }}</span>
         </div>
         <p class="check__notice">
           *shipping charges, taxes and discount codes are calculated at the time
@@ -69,22 +69,20 @@ import {
 import { IconClose, IconShoppingBag } from "@/components/icons/index.js";
 import CartItem from "@/components/cart/CartItem";
 import { useCart } from "@/stores/cart.js";
+import { storeToRefs } from "pinia";
 
 const store = useCart();
 
-const cart = store.allCart;
+const { cart, fullAmount } = storeToRefs(store);
 
 const increment = (item) => {
-  // console.log(item);
   store.increment(item);
 };
 
 const decrement = (item) => {
   store.decrement(item);
-  // console.log(item);
 };
 
-const amount = store.fullAmount;
 </script>
 
 <style lang="sass" scoped>
@@ -100,11 +98,9 @@ ion-header::after
 .content
 	height: 100%
 	padding: 0 15px
-
 	&__item
 		& + &
 			margin-top: 15px
-
 	&--empty
 		height: 100%
 		display: flex
@@ -123,7 +119,6 @@ ion-header::after
 	flex-direction: column
 	font-size: 14px
 	color: #333333
-
 	&__description
 		display: flex
 		justify-content: space-between
@@ -132,23 +127,19 @@ ion-header::after
 		letter-spacing: 2px
 		text-transform: uppercase
 		margin-bottom: 15px
-
 	&__amount
 		color: #DD8560
 		font-size: 18px
-
 	&__notice
 		text-align: justify
 		color: #888888
 
 .result
-
 	&__button
 		width: 100%
 		height: 56px
 		--background: black
 		--border-radius: none
-
 	&__text
 		font-size: 16px
 		line-height: 26px

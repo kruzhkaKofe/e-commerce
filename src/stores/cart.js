@@ -47,10 +47,6 @@ export const useCart = defineStore("cart", {
   }),
 
   getters: {
-    allCart() {
-      return this.cart;
-    },
-
     fullAmount() {
       const amount = this.cart.reduce((result, item) => {
         return result + item.volume * item.price;
@@ -69,14 +65,14 @@ export const useCart = defineStore("cart", {
       const item = this.cart.find((item) => item.id === product.id);
       if (item.volume > 1) {
         item.volume--;
-      }
-      if (item.volume === 1) {
+        return;
+      } else {
         this.removeFromCart(item);
       }
     },
 
     removeFromCart(product) {
-      this.cart = this.cart.filter((item) => item.id !== product.id);
+      this.cart = this.cart.filter((item) => item.id != product.id);
     },
   },
 });
