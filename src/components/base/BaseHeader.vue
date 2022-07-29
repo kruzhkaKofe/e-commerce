@@ -3,7 +3,7 @@
     <ion-toolbar>
       <ion-buttons slot="start">
         <ion-menu-button class="menu__open-button" menu="first">
-          <icon-menu class="icon-search"/>
+          <icon-menu class="icon-search" />
         </ion-menu-button>
       </ion-buttons>
       <div class="wrapper-logo">
@@ -15,7 +15,7 @@
         </ion-button>
         <ion-button>
           <ion-menu-button class="cart__open-button" menu="second">
-            <icon-shopping-bag class="icon-shopping-bag"/>
+            <icon-shopping-bag class="icon-shopping-bag" />
           </ion-menu-button>
         </ion-button>
       </ion-buttons>
@@ -41,12 +41,6 @@ import {
 </script>
 
 <style lang="sass" scoped>
-ion-toolbar
-	--border-width: 0px
-	--border-style: none
-	--border-color: #FFFFFF
-	--background: #FFFFFF
-
 ion-button
 	width: 48px
 	height: 48px
