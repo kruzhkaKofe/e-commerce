@@ -139,6 +139,20 @@ export const useCollections = defineStore("collections", {
     allOctober() {
       return this.october;
     },
+
+    getCollectionById() {
+      return (collectionId) => {
+        return this.october.find((collection) => collection.id == collectionId);
+      };
+    },
+
+    getOtherCollections() {
+      return (collectionId) => {
+        return this.october.filter(
+          (collection) => collection.id != collectionId
+        );
+      };
+    },
   },
 
   actions: {},
