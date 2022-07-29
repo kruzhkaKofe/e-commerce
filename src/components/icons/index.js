@@ -11,3 +11,6 @@ export { default as IconTwitterDark } from "./icon.twitter-dark.vue";
 export { default as IconBookmark } from "./icon.bookmark.vue";
 export { default as IconPlus } from "./icon.plus.vue";
 export { default as IconMinus } from "./icon.minus.vue";
+export { default as IconArrowDown } from "./icon.arrow-down.vue";
+export { default as IconPhone } from "./icon.phone.vue";
+export { default as IconLocationPin } from "./icon.location-pin.vue";
