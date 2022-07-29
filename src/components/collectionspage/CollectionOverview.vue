@@ -1,7 +1,7 @@
 <template>
-	<base-layout page-default-back-link="/october-collection">
-    
-  </base-layout>
+	<div>
+
+	</div>
 </template>
 
 <script setup>

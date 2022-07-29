@@ -5,7 +5,7 @@
   >
     <ion-img
       class="collection__cover"
-      :src="collection.image"
+      :src="collection.cover"
       :alt="collection.title"
     />
     <div class="collection__footer">

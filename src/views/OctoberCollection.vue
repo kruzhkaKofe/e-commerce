@@ -1,30 +1,17 @@
 <template>
   <base-layout page-default-back-link="/home">
-    <collections-list :collections="collections" />
+    <collection-section :collections="collections" />
   </base-layout>
 </template>
 
 <script setup>
 import BaseLayout from "@/components/base/BaseLayout";
-import CollectionsList from "@/components/collectionspage/CollectionsList";
+import CollectionSection from "@/components/collectionspage/CollectionSection";
+import { useCollections } from "@/stores/collections.js";
 
-const collections = [
-  {
-    id: 1,
-    image: "assets/october-collection/01-image.jpg",
-    title: "October collection",
-  },
-  {
-    id: 2,
-    image: "assets/october-collection/02-image.jpg",
-    title: "Black collection",
-  },
-  {
-    id: 3,
-    image: "assets/october-collection/03-image.jpg",
-    title: "Hae by Haekim",
-  },
-];
+const store = useCollections();
+
+const collections = store.allOctober;
 </script>
 
 <style lang="sass" scoped>

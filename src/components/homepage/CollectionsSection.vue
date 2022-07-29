@@ -1,35 +1,40 @@
 <template>
-	<section class="collection">
-		<base-section-heading :stick="false">Collections</base-section-heading>
-		<div class="collection__october collection__block">
-			<span class="october__number">10</span>
-			<div class="october__title">
-				<span class="october__title__name">October</span>
-				<span class="october__title__name">Collection</span>
-			</div>
-		</div>
-		<div class="collection__autumn collection__block">
-			<div class="autumn__title">
-				<span class="autumn__title__name">Autumn</span>
-				<span class="autumn__title__name">Collection</span>
-			</div>
-		</div>
-		<video class="collection__video" poster="/assets/homepage/collections/preview-collection.jpg">
-		</video>
-	</section>
+  <section class="collection">
+    <base-section-heading :stick="false">Collections</base-section-heading>
+    <div
+      class="collection__october collection__block"
+      @click="$router.push('/october-collection')"
+    >
+      <span class="october__number">10</span>
+      <div class="october__title">
+        <span class="october__title__name">October</span>
+        <span class="october__title__name">Collection</span>
+      </div>
+    </div>
+    <div class="collection__autumn collection__block">
+      <div class="autumn__title">
+        <span class="autumn__title__name">Autumn</span>
+        <span class="autumn__title__name">Collection</span>
+      </div>
+    </div>
+    <video
+      class="collection__video"
+      poster="/assets/homepage/collections/preview-collection.jpg"
+    ></video>
+  </section>
 </template>
 
 <script setup>
-import BaseSectionHeading from "@/components/base/BaseSectionHeading"
+import BaseSectionHeading from "@/components/base/BaseSectionHeading";
 </script>
 
 <style lang="sass" scoped>
-.collection 
+.collection
 	padding: 20px 0
 	display: flex
 	flex-direction: column
 	align-items: center
-	&__block 
+	&__block
 		margin-bottom: 40px
 	&__october
 		width: 100vw
@@ -46,7 +51,7 @@ import BaseSectionHeading from "@/components/base/BaseSectionHeading"
 	&__video
 		width: 100vw
 
-.october	 
+.october
 	&__number
 		position: absolute
 		right: 65px
@@ -84,7 +89,7 @@ import BaseSectionHeading from "@/components/base/BaseSectionHeading"
 				font-weight: 700
 				font-size: 42px
 				line-height: 63px
-				
+
 .autumn
 	&__title
 		display: flex
