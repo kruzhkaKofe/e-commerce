@@ -89,16 +89,13 @@ const products = [
 			letter-spacing: 1px
 			--color: rgba(136, 136, 136, 0.8)
 			--color-checked: #212806
-			--ripple-color: #DD8560
-
-			&::part(native)
-
+			--ripple-color: transparent
 			&::part(indicator)
-				// --indicator-height: 4px
-				// transform: rotate(45deg)
+				content: url('/public/assets/icons/tabs-underline.svg')
+				width: 10px
+				left: calc(50% - 5px)
 			&::part(indicator-background)
 				background-color: #DD8560
-
 		&-label
 			display: flex
 			align-items: center

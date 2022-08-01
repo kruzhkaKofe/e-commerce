@@ -184,7 +184,19 @@ ion-header::after
 		text-transform: uppercase
 		--color: rgba(136, 136, 136, 0.8)
 		--color-checked: #212806
-		--ripple-color: #DD8560
+		--ripple-color: transparent
+		&::part(indicator)
+			position: relative
+			padding-bottom: 8.5px
+		&::part(indicator)::before
+			position: absolute
+			bottom: 5px
+			background-color: #DD8560
+			content: ''
+			width: 10px
+			height: 10px
+			left: calc(50%)
+			transform: translate(-50%) rotate(45deg)
 		&::part(indicator-background)
 			background-color: #DD8560
 
