@@ -15,14 +15,16 @@
         You have no items in your Shopping Bag.
       </div>
       <div class="content" v-else>
-        <cart-item
-          v-for="item in cart"
-          :key="item.id"
-          :item="item"
-          @decrement="decrement"
-          @increment="increment"
-          class="content__item"
-        />
+        <transition-group name="cart-item">
+          <cart-item
+            v-for="item in cart"
+            :key="item.id"
+            :item="item"
+            @decrement="decrement"
+            @increment="increment"
+            class="content__item"
+          />
+        </transition-group>
       </div>
     </ion-content>
     <ion-footer v-if="cart.length === 0">
@@ -82,12 +84,20 @@ const increment = (item) => {
 const decrement = (item) => {
   store.decrement(item);
 };
-
 </script>
 
 <style lang="sass" scoped>
 ion-header::after
 	height: 0
+
+.cart-item-enter-active,
+.cart-item-leave-active 
+	transition: all .7s ease
+
+.cart-item-enter-from,
+.cart-item-leave-to 
+	opacity: 0
+	transform: translateX(-50px)
 
 .title
 	font-size: 14px
