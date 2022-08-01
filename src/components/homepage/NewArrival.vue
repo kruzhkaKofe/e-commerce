@@ -1,18 +1,19 @@
 <template>
   <section class="arrival">
     <base-section-heading>New Arrival</base-section-heading>
-    <ion-tab-bar class="arrival__tab-bar">
-      <ion-tab-button
-        class="arrival__tab-button"
+    <ion-segment class="arrival__segment" value="All" :swipeGesture="false">
+      <ion-segment-button
+        class="arrival__segment-button"
         v-for="(tab, i) in tabs"
         :key="i"
         :tab="tab"
+        :value="tab"
       >
-        <ion-label class="arrival__tab-label">
+        <ion-label class="arrival__segment-label">
           {{ tab }}
         </ion-label>
-      </ion-tab-button>
-    </ion-tab-bar>
+      </ion-segment-button>
+    </ion-segment>
     <div class="arrival__list">
       <product-item
         v-for="product in products"
@@ -33,15 +34,14 @@
 <script setup>
 import {
   IonIcon,
-  IonTabBar,
-  IonTabButton,
+  IonSegment,
+  IonSegmentButton,
   IonLabel,
   IonButton,
 } from "@ionic/vue";
 import BaseSectionHeading from "@/components/base/BaseSectionHeading";
 import ProductItem from "@/components/homepage/ProductItem";
 import { IconForwardArrow } from "@/components/icons/index";
-import { ref } from "vue";
 
 const tabs = ["All", "Apparel", "Dress", "Tshirt", "Bag"];
 
@@ -79,21 +79,30 @@ const products = [
 	color: black
 	text-align: center
 	border: none
-	&__tab-bar
+	&__segment
 		--background: #FFFFFF
-		--border: none
-		margin-bottom: 10px
-	&__tab-button
-		font-size: 14px
-		line-height: 106%
-		letter-spacing: 1px
-		--color: rgba(136, 136, 136, 0.8)
-		--color-selected: #212806
-		--ripple-color: #DD8560
-	&__tab-label
-		display: flex
-		align-items: center
-		height: 100%
+		margin-bottom: 15px
+		&-button
+			text-transform: capitalize
+			font-size: 14px
+			line-height: 106%
+			letter-spacing: 1px
+			--color: rgba(136, 136, 136, 0.8)
+			--color-checked: #212806
+			--ripple-color: #DD8560
+
+			&::part(native)
+
+			&::part(indicator)
+				// --indicator-height: 4px
+				// transform: rotate(45deg)
+			&::part(indicator-background)
+				background-color: #DD8560
+
+		&-label
+			display: flex
+			align-items: center
+			height: 100%
 	&__list
 		display: flex
 		flex-wrap: wrap

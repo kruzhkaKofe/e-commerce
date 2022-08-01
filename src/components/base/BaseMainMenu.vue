@@ -10,11 +10,17 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <ion-tab-bar>
-        <ion-tab-button v-for="(gender, i) in genders" :key="i" :tab="gender">
-          <ion-label>{{ gender }}</ion-label>
-        </ion-tab-button>
-      </ion-tab-bar>
+      <ion-segment class="segment" value="Women">
+        <ion-segment-button
+          class="segment__button"
+          v-for="(gender, i) in genders"
+          :key="i"
+          :tab="gender"
+          :value="gender"
+        >
+          <ion-label class="segment__label">{{ gender }}</ion-label>
+        </ion-segment-button>
+      </ion-segment>
       <ion-accordion-group :multiple="true">
         <ion-accordion
           class="accordion"
@@ -77,6 +83,8 @@
 import {
   IonHeader,
   IonToolbar,
+  IonSegment,
+  IonSegmentButton,
   IonButtons,
   IonButton,
   IonMenuToggle,
@@ -86,8 +94,6 @@ import {
   IonAccordionGroup,
   IonList,
   IonItem,
-  IonTabBar,
-  IonTabButton,
   IonLabel,
 } from "@ionic/vue";
 
@@ -169,20 +175,28 @@ const accordions = [
 ion-header::after
 	height: 0
 
-ion-tab-bar
+.segment
 	--background: #FFFFFF
+	&__button
+		font-size: 14px
+		line-height: 34px
+		letter-spacing: 3px
+		text-transform: uppercase
+		--color: rgba(136, 136, 136, 0.8)
+		--color-checked: #212806
+		--ripple-color: #DD8560
+		&::part(indicator-background)
+			background-color: #DD8560
 
 .accordion
 	&__label
 		font-size: 16px
 		line-height: 48px
 		--color: #333333
-
 	&__list
 		display: flex
 		flex-direction: column
 		padding: 0px 36px
-
 	&__link
 		font-size: 16px
 		line-height: 46px
@@ -197,10 +211,8 @@ ion-tab-bar
 	&__item
 		display: flex
 		align-items: center
-
 		& + &
 			margin-top: 15px
-
 	&__link
 		margin-left: 15px
 		font-size: 16px
@@ -212,7 +224,6 @@ ion-tab-bar
 	display: flex
 	flex-direction: column
 	align-items: center
-
 	&__stick
 		margin-top: 10px
 
