@@ -1,6 +1,6 @@
 <template>
   <base-layout page-default-back-link="/home" :footer="false">
-    <base-checkout :cart="cart" @decrement="decrement" @increment="increment" />
+    <base-checkout :cart="cart" @decrement="decrement" @increment="increment" :fullAmount="fullAmount"/>
   </base-layout>
 </template>
 

@@ -28,6 +28,7 @@
         </transition-group>
       </div>
     </ion-content>
+    
     <ion-footer v-if="cart.length === 0">
       <ion-menu-toggle class="result" menu="second">
         <ion-button class="result__button">
