@@ -3,43 +3,7 @@
     <base-section-heading class="checkout__heading"
       >Checkout</base-section-heading
     >
-    <transition-group name="cart-item">
-      <base-cart-item
-        class="checkout__item"
-        v-for="item in cart"
-        :key="item.id"
-        :item="item"
-        @decrement="decrement"
-        @increment="increment"
-      />
-    </transition-group>
-    <ion-item-divider />
-    <ion-item class="checkout__promo">
-      <icon-voucher class="checkout__icon" />
-      <ion-input
-        class="checkout__input"
-        type="text"
-        placeholder="Add promo code"
-        clear-input
-      ></ion-input>
-    </ion-item>
-    <ion-item class="checkout__delivery">
-      <icon-delivery class="checkout__icon" />
-      <ion-label class="checkout__delivery-label">Delivery</ion-label>
-      <ion-select
-        class="checkout__select"
-        interface="action-sheet"
-        :interface-options="selectOptions"
-        value="Free"
-      >
-        <ion-select-option class="checkout__select-option" value="Free"
-          >Free</ion-select-option
-        >
-        <ion-select-option class="checkout__select-option" value="Express"
-          >Express(+5.99$)</ion-select-option
-        >
-      </ion-select>
-    </ion-item>
+    <slot></slot>
     <ion-footer class="checkout__footer">
       <div class="checkout__amount ion-padding">
         <span class="checkout__total">Est. total</span>
@@ -55,43 +19,12 @@
 
 <script setup>
 import BaseSectionHeading from "./BaseSectionHeading";
-import BaseBlackButton from "./BaseBlackButton";
-import BaseCartItem from "./BaseCartItem";
-import {
-  IconVoucher,
-  IconDelivery,
-  IconShoppingBag,
-} from "@/components/icons/index";
-import {
-  IonFooter,
-  IonItem,
-  IonLabel,
-  IonItemDivider,
-  IonInput,
-  IonSelect,
-  IonSelectOption,
-  IonButton,
-} from "@ionic/vue";
+import { IonFooter, IonButton } from "@ionic/vue";
+import { IconShoppingBag } from "@/components/icons/index";
 
 const props = defineProps({
-  cart: Array,
   fullAmount: Number,
 });
-
-const emit = defineEmits(["increment", "decrement"]);
-
-const increment = (item) => {
-  emit("increment", item);
-};
-
-const decrement = (item) => {
-  emit("decrement", item);
-};
-
-const selectOptions = {
-  header: "Delivery",
-  subHeader: "Select delivery option",
-};
 </script>
 
 <style lang="sass" scoped>
