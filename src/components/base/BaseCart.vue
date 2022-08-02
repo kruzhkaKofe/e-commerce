@@ -14,9 +14,10 @@
       <div class="content--empty" v-if="cart.length === 0">
         You have no items in your Shopping Bag.
       </div>
+
       <div class="content" v-else>
         <transition-group name="cart-item">
-          <cart-item
+          <base-cart-item
             v-for="item in cart"
             :key="item.id"
             :item="item"
@@ -35,6 +36,7 @@
         </ion-button>
       </ion-menu-toggle>
     </ion-footer>
+
     <ion-footer v-else>
       <div class="check">
         <div class="check__description">
@@ -47,7 +49,7 @@
         </p>
       </div>
       <ion-menu-toggle class="result" menu="second">
-        <ion-button class="result__button">
+        <ion-button class="result__button" @click="$router.push('/checkout')">
           <icon-shopping-bag class="result__shoopping-bag-icon" />
           <p class="result__text">Buy now</p>
         </ion-button>
@@ -69,7 +71,7 @@ import {
 } from "@ionic/vue";
 
 import { IconClose, IconShoppingBag } from "@/components/icons/index.js";
-import CartItem from "@/components/cart/CartItem";
+import BaseCartItem from "./BaseCartItem";
 import { useCart } from "@/stores/cart.js";
 import { storeToRefs } from "pinia";
 
@@ -91,11 +93,11 @@ ion-header::after
 	height: 0
 
 .cart-item-enter-active,
-.cart-item-leave-active 
+.cart-item-leave-active
 	transition: all .7s ease
 
 .cart-item-enter-from,
-.cart-item-leave-to 
+.cart-item-leave-to
 	opacity: 0
 	transform: translateX(-50px)
 

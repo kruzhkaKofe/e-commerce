@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "@ionic/vue-router";
 import HomePage from "@/views/HomePage";
 import BlogPage from "@/views/BlogPage";
 import OctoberCollection from "@/views/OctoberCollection";
+import CheckoutPage from "@/views/CheckoutPage";
 
 const routes = [
   {
@@ -27,6 +28,10 @@ const routes = [
   {
     path: "/october-collection/:id",
     component: () => import("@/views/OctoberCollectionDetails"),
+  },
+  {
+    path: "/checkout",
+    component: CheckoutPage,
   },
 ];
 

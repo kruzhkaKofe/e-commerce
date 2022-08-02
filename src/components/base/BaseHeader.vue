@@ -1,6 +1,16 @@
 <template>
   <ion-header>
-    <ion-toolbar>
+    <ion-toolbar v-if="searchOpen">
+      <ion-searchbar
+        placeholder="Search Items"
+        type="text"
+        inputmode="text"
+        :animated="true"
+        show-cancel-button="always"
+        @ionCancel="isOpen"
+      ></ion-searchbar>
+    </ion-toolbar>
+    <ion-toolbar v-else>
       <ion-buttons slot="start">
         <ion-menu-button class="menu__open-button" menu="first">
           <icon-menu class="icon-search" />
@@ -11,7 +21,7 @@
       </div>
       <ion-buttons slot="end">
         <ion-button>
-          <icon-search class="icon-search" />
+          <icon-search class="icon-search" @click="isOpen" />
         </ion-button>
         <ion-button>
           <ion-menu-button class="cart__open-button" menu="second">
@@ -30,6 +40,7 @@ import {
   IonButtons,
   IonButton,
   IonMenuButton,
+  IonSearchbar,
   IonImg,
 } from "@ionic/vue";
 
@@ -38,6 +49,13 @@ import {
   IconShoppingBag,
   IconMenu,
 } from "@/components/icons/index.js";
+import { ref } from "@vue/reactivity";
+
+const searchOpen = ref(false);
+
+const isOpen = () => {
+  searchOpen.value = !searchOpen.value;
+};
 </script>
 
 <style lang="sass" scoped>
