@@ -41,9 +41,10 @@ const props = defineProps({
 
 	&__title
 		font-size: 14px
-		line-height: 22px
+		line-height: 24px
 		text-transform: uppercase
 		margin-bottom: 10px
+		color: #000000
 
 	&__text_before,
 	&__text_after

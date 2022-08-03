@@ -54,6 +54,7 @@ const decrement = (item) => {
 
 <style lang="sass" scoped>
 .card
+	background-color: #FFFFFF
 	display: flex
 	align-items: center
 	height: 130px

@@ -1,5 +1,5 @@
 <template>
-  <ion-list class="list">
+  <ion-list class="list ion-padding">
     <blog-item v-for="blog in blogs" :key="blog.id" :blog="blog"></blog-item>
   </ion-list>
 </template>
@@ -15,7 +15,7 @@ const props = defineProps({
 
 <style lang="sass" scoped>
 .list
-	padding: 16px 0
+	background-color: #fff
 	display: flex
 	flex-direction: column
 	align-items: center

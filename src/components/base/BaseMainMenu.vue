@@ -201,11 +201,13 @@ ion-header::after
 			background-color: #DD8560
 
 .accordion
+	background: #FFFFFF
 	&__label
 		font-size: 16px
 		line-height: 48px
 		--color: #333333
 	&__list
+		background: #FFFFFF
 		display: flex
 		flex-direction: column
 		padding: 0px 36px

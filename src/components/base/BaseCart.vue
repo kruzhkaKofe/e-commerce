@@ -38,7 +38,7 @@
       </ion-menu-toggle>
     </ion-footer>
 
-    <ion-footer v-else>
+    <ion-footer v-else class="footer">
       <div class="check">
         <div class="check__description">
           Sub total
@@ -95,7 +95,7 @@ ion-header::after
 
 .cart-item-enter-active,
 .cart-item-leave-active
-	transition: all .7s ease
+	transition: all .5s ease
 
 .cart-item-enter-from,
 .cart-item-leave-to
@@ -125,6 +125,9 @@ ion-header::after
 
 :deep(.result__shoopping-bag-icon) path
 	stroke: #FCFCFC
+
+.footer
+	background-color: #FFFFFF
 
 .check
 	padding: 25px 15px

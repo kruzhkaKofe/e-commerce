@@ -1,13 +1,13 @@
 <template>
   <ion-item class="item" :router-link="`/blog/${blog.id}`">
-    <div class="item__cover" >
+    <div class="item__cover">
       <ion-img class="item__image" :src="blog.image" :alt="blog.id"></ion-img>
       <div class="item__title">
         <h3 class="item__title__text">{{ blog.title }}</h3>
       </div>
-			<ion-checkbox class="item__add-favourite">
-				<icon-bookmark class="item__bookmark" />
-			</ion-checkbox>
+      <ion-checkbox class="item__add-favourite">
+        <icon-bookmark class="item__bookmark" />
+      </ion-checkbox>
     </div>
     <div class="item__info" @click.prevent>
       <div class="item__tags">
@@ -33,9 +33,10 @@ const props = defineProps({
 .item
 	--inner-padding-end: 0
 	--inner-border-width: 0
-	width: 343px
+	--background: #FFFFFF
+	width: 100%
 	margin-bottom: 28px
-	
+
 	&:last-child
 		margin-bottom: 0
 
@@ -46,8 +47,11 @@ const props = defineProps({
 
 	&__cover,
 	&__image
-		width: 343px
+		width: 100%
 		height: 200px
+
+	&__image::part(image)
+		object-fit: cover
 
 	&__cover
 		position: relative
@@ -63,7 +67,7 @@ const props = defineProps({
 		text-transform: uppercase
 		color: #FCFCFC
 		background: linear-gradient(360deg, #111111 0%, rgba(17, 17, 17, 0.991353) 6.6%, rgba(17, 17, 17, 0.96449) 13.19%, rgba(17, 17, 17, 0.91834) 19.79%, rgba(17, 17, 17, 0.852589) 26.38%, rgba(17, 17, 17, 0.768225) 32.98%, rgba(17, 17, 17, 0.668116) 39.57%, rgba(17, 17, 17, 0.557309) 46.17%, rgba(17, 17, 17, 0.442691) 52.77%, rgba(17, 17, 17, 0.331884) 59.36%, rgba(17, 17, 17, 0.231775) 65.96%, rgba(17, 17, 17, 0.147411) 72.55%, rgba(17, 17, 17, 0.0816599) 79.15%, rgba(17, 17, 17, 0.03551) 85.74%, rgba(17, 17, 17, 0.0086472) 92.34%, rgba(17, 17, 17, 0) 98.94%)
-		
+
 		&__text
 			font-size: 14px
 			line-height: 20px
@@ -73,7 +77,7 @@ const props = defineProps({
 		position: absolute
 		top: 13px
 		right: 13px
-		// --background: transparent
+		--background: #FFFFFF
 		--border-width: 0
 		--background-hover: transparent
 		--background-checked: #DD8560
@@ -103,9 +107,8 @@ const props = defineProps({
 
 		&:last-child
 			margin-right: 0
-			
+
 // .favourite :deep(.item__bookmark) path
 // 	fill: #DD8560
 // 	stroke: #DD8560
-
 </style>

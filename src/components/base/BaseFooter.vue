@@ -71,6 +71,7 @@ a
 		flex-direction: column
 		align-items: center
 		margin: 18px 0
+		color: #333333
 		&__item
 			line-height: 184%
 	&__nav

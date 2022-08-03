@@ -59,6 +59,14 @@ const isOpen = () => {
 </script>
 
 <style lang="sass" scoped>
+ion-searchbar
+	font-size: 14px
+	line-height: 34px
+	--background: #FFFFFF
+	--placeholder-color: #000000
+	--cancel-button-color: #555555
+	--color: #000000
+
 ion-button
 	width: 48px
 	height: 48px

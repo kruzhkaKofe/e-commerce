@@ -1,5 +1,5 @@
 <template>
-  <div class="recommendation">
+  <section class="recommendation">
     <base-section-heading>Just for you</base-section-heading>
     <swiper
       class="recommendation__swiper"
@@ -7,8 +7,8 @@
       :spaceBetween="15"
       :modules="modules"
       :pagination="{
-				el: '.recommendation__pagination',
-			}"
+        el: '.recommendation__pagination',
+      }"
     >
       <swiper-slide
         v-for="rec in recs"
@@ -27,7 +27,7 @@
       </swiper-slide>
       <div class="recommendation__pagination"></div>
     </swiper>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -65,7 +65,8 @@ const props = defineProps({
 			align-items: center
 			text-align: center
 			font-size: 16px
-			line-height: 24px	
+			line-height: 24px
+			color: #333333
 		&__price
 			color: #DD8560
 	&__pagination
@@ -83,5 +84,4 @@ const props = defineProps({
 
 :deep(.swiper-pagination-bullet-active)
 	background-color: #888888
-
 </style>
