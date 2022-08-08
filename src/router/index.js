@@ -4,6 +4,7 @@ import BlogPage from "@/views/BlogPage";
 import OctoberCollection from "@/views/OctoberCollection";
 import CheckoutPage from "@/views/CheckoutPage";
 import ContactsPage from "@/views/ContactsPage";
+import AboutPage from "@/views/AboutPage";
 
 const routes = [
   {
@@ -37,6 +38,10 @@ const routes = [
   {
     path: "/contacts",
     component: ContactsPage,
+  },
+  {
+    path: "/about",
+    component: AboutPage,
   },
 ];
 

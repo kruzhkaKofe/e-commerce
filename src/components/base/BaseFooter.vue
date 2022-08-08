@@ -23,7 +23,7 @@
     </address>
     <icon-stick></icon-stick>
     <nav class="footer__nav">
-      <router-link to="/#" class="footer__nav__link">About</router-link>
+      <router-link to="/about" class="footer__nav__link">About</router-link>
       <router-link to="/contacts" class="footer__nav__link">Contacts</router-link>
       <router-link to="/blogs" class="footer__nav__link">Blogs</router-link>
     </nav>
