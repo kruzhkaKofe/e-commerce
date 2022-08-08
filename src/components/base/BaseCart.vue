@@ -1,8 +1,8 @@
 <template>
-  <ion-menu content-id="menu" menu-id="second" class="cart" side="end">
+  <ion-menu side="end" content-id="menu" menu-id="cart" class="cart">
     <ion-header>
       <ion-toolbar class="toolbar">
-        <ion-menu-toggle slot="start" menu="second">
+        <ion-menu-toggle slot="start" menu="cart" autoHide="false">
           <ion-button class="close-button">
             <icon-close></icon-close>
           </ion-button>

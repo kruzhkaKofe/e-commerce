@@ -1,5 +1,5 @@
 <template>
-  <div class="menues">
+  <div class="menus">
     <base-main-menu />
     <base-cart />
   </div>

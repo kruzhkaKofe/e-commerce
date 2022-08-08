@@ -10,11 +10,12 @@
         @ionCancel="isOpen"
       ></ion-searchbar>
     </ion-toolbar>
+
     <ion-toolbar v-else>
       <ion-buttons slot="start">
         <ion-menu-button
           class="menu__open-button"
-          menu="first"
+          menu="main"
           autoHide="false"
         >
           <icon-menu class="icon-search" />
@@ -30,7 +31,7 @@
         <ion-button>
           <ion-menu-button
             class="cart__open-button"
-            menu="second"
+            menu="cart"
             autoHide="false"
           >
             <icon-shopping-bag class="icon-shopping-bag" />
@@ -57,7 +58,7 @@ import {
   IconShoppingBag,
   IconMenu,
 } from "@/components/icons/index.js";
-import { ref } from "@vue/reactivity";
+import { ref } from "vue";
 
 const searchOpen = ref(false);
 
@@ -82,12 +83,6 @@ ion-button
 
 .header-md::after
 	content: none
-
-// .menu__open-button::part(icon)
-// 	content: ''
-
-// .cart__open-button::part(icon)
-// 	content: ''
 
 .wrapper-logo
 	display: flex

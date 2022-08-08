@@ -21,7 +21,7 @@
     <div class="arrival__list" v-if="currentSegment === 'All'">
       <product-item
         v-for="product in products"
-        :key="product.id"
+        :key="product.id"	
         :product="product"
       />
     </div>

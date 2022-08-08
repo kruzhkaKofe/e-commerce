@@ -3,6 +3,7 @@ import HomePage from "@/views/HomePage";
 import BlogPage from "@/views/BlogPage";
 import OctoberCollection from "@/views/OctoberCollection";
 import CheckoutPage from "@/views/CheckoutPage";
+import ContactsPage from "@/views/ContactsPage";
 
 const routes = [
   {
@@ -14,7 +15,7 @@ const routes = [
     component: HomePage,
   },
   {
-    path: "/blog",
+    path: "/blogs",
     component: BlogPage,
   },
   {
@@ -32,6 +33,10 @@ const routes = [
   {
     path: "/checkout",
     component: CheckoutPage,
+  },
+  {
+    path: "/contacts",
+    component: ContactsPage,
   },
 ];
 

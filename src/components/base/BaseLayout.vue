@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <base-menues></base-menues>
+    <base-menus />
     <base-header id="menu"></base-header>
     <ion-content>
       <slot></slot>
@@ -13,7 +13,7 @@
 import { IonPage, IonContent } from "@ionic/vue";
 import BaseHeader from "./BaseHeader";
 import BaseFooter from "./BaseFooter";
-import BaseMenues from "./BaseMenues.vue";
+import BaseMenus from "./BaseMenus.vue";
 
 const props = defineProps({
   footer: {

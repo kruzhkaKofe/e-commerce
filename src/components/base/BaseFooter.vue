@@ -24,8 +24,8 @@
     <icon-stick></icon-stick>
     <nav class="footer__nav">
       <router-link to="/#" class="footer__nav__link">About</router-link>
-      <router-link to="/#" class="footer__nav__link">Contact</router-link>
-      <router-link to="/blog" class="footer__nav__link">Blog</router-link>
+      <router-link to="/contacts" class="footer__nav__link">Contacts</router-link>
+      <router-link to="/blogs" class="footer__nav__link">Blogs</router-link>
     </nav>
     <div class="footer__copyright">Copyright© OpenUI All Rights Reserved.</div>
   </ion-footer>
