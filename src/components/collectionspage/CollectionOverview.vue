@@ -28,6 +28,7 @@ const props = defineProps({
     position: relative
     z-index: 10
     margin-bottom: 30px
+    height: 480px
   &__list
     margin-bottom: 40px
 </style>

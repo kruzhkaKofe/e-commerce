@@ -28,34 +28,10 @@ const props = defineProps({
 </script>
 
 <style lang="sass" scoped>
-.cart-item-enter-active,
-.cart-item-leave-active
-	transition: all .7s ease
-
-.cart-item-enter-from,
-.cart-item-leave-to
-	opacity: 0
-	transform: translateX(-50px)
-
 .checkout
 	position: relative
 	padding-top: 30px
-	padding-bottom: 110px
-	&__item
-		& + &
-			margin-top: 15px
-	&__icon
-		margin-right: 10px
-	&__promo
-		--highlight-color-focused: #DD8560
-	&__input,
-	&__delivery
-		font-size: 14px
-		line-height: 16px
-		color: #333333
-		--placeholder-opacity: 1
-	&__delivery
-		--highlight-color-focused: #DD8560
+	padding-bottom: 130px
 	&__amount
 		display: flex
 		align-items: center

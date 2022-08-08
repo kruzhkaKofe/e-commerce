@@ -46,7 +46,8 @@ const numOfCollection = computed(() => {
 		padding: 0
 
 	&__cover
-		width: 100%
+		width: 361px
+		height: 480px
 
 	&__footer
 		width: 100%

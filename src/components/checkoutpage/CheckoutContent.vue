@@ -25,7 +25,7 @@
     <ion-select
       class="checkout__select"
       interface="action-sheet"
-      :interface-options="selectOptions"
+      :interface-options="options"
       value="Free"
     >
       <ion-select-option class="checkout__select-option" value="Free"
@@ -64,10 +64,47 @@ const decrement = (item) => {
   emit("decrement", item);
 };
 
-const selectOptions = {
+const options = {
   header: "Delivery",
   subHeader: "Select delivery option",
 };
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="sass" scoped>
+.cart-item-enter-active,
+.cart-item-leave-active
+	transition: all .7s ease
+
+.cart-item-enter-from,
+.cart-item-leave-to
+	opacity: 0
+	transform: translateX(-50px)
+
+ion-item
+	--background: #FFFFFF
+	--border-color: rgba(0, 0, 0, 0.1)
+
+ion-item-divider
+	--background: #FFFFFF
+	--ion-item-border-color: rgba(0, 0, 0, 0.1)
+
+.checkout
+	&__item
+		& + &
+			margin-top: 15px
+	&__icon
+		margin-right: 10px
+	&__promo
+		--highlight-color-focused: #DD8560
+	&__input,
+	&__delivery
+		font-size: 14px
+		line-height: 16px
+		color: #333333
+		--placeholder-opacity: 1
+	&__delivery
+		--highlight-color-focused: #DD8560
+	&__select
+		&-option
+			background: #FFFFFF
+</style>

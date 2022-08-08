@@ -12,7 +12,11 @@
     </ion-toolbar>
     <ion-toolbar v-else>
       <ion-buttons slot="start">
-        <ion-menu-button class="menu__open-button" menu="first">
+        <ion-menu-button
+          class="menu__open-button"
+          menu="first"
+          autoHide="false"
+        >
           <icon-menu class="icon-search" />
         </ion-menu-button>
       </ion-buttons>
@@ -24,7 +28,11 @@
           <icon-search class="icon-search" @click="isOpen" />
         </ion-button>
         <ion-button>
-          <ion-menu-button class="cart__open-button" menu="second">
+          <ion-menu-button
+            class="cart__open-button"
+            menu="second"
+            autoHide="false"
+          >
             <icon-shopping-bag class="icon-shopping-bag" />
           </ion-menu-button>
         </ion-button>
@@ -75,11 +83,11 @@ ion-button
 .header-md::after
 	content: none
 
-.menu__open-button::part(icon)
-	content: ''
+// .menu__open-button::part(icon)
+// 	content: ''
 
-.cart__open-button::part(icon)
-	content: ''
+// .cart__open-button::part(icon)
+// 	content: ''
 
 .wrapper-logo
 	display: flex

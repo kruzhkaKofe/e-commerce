@@ -12,7 +12,7 @@
       ></router-link>
     </div>
     <icon-stick></icon-stick>
-    <div class="footer__contacts">
+    <address class="footer__contacts">
       <router-link class="footer__contacts__item" to="/#"
         >support@openui.design</router-link
       >
@@ -20,7 +20,7 @@
         >+60 825 876</router-link
       >
       <span class="footer__contacts__item">08:00 - 22:00 - Everyday</span>
-    </div>
+    </address>
     <icon-stick></icon-stick>
     <nav class="footer__nav">
       <router-link to="/#" class="footer__nav__link">About</router-link>
@@ -70,6 +70,7 @@ a
 		display: flex
 		flex-direction: column
 		align-items: center
+		font-style: normal
 		margin: 18px 0
 		color: #333333
 		&__item
