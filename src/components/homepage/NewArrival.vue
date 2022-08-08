@@ -1,26 +1,32 @@
 <template>
   <section class="arrival">
     <base-section-heading>New Arrival</base-section-heading>
-    <ion-segment class="arrival__segment" value="All" :swipeGesture="false">
+    <ion-segment
+      class="arrival__segment"
+      :swipeGesture="false"
+      @ionChange="changeSegment($event)"
+      v-model="currentSegment"
+    >
       <ion-segment-button
         class="arrival__segment-button"
-        v-for="(tab, i) in tabs"
+        v-for="(segment, i) in segments"
         :key="i"
-        :tab="tab"
-        :value="tab"
+        :value="segment"
       >
         <ion-label class="arrival__segment-label">
-          {{ tab }}
+          {{ segment }}
         </ion-label>
       </ion-segment-button>
     </ion-segment>
-    <div class="arrival__list">
+    <div class="arrival__list" v-if="currentSegment === 'All'">
       <product-item
         v-for="product in products"
         :key="product.id"
         :product="product"
-      >
-      </product-item>
+      />
+    </div>
+    <div class="arrival__list arrival__list_demo" v-else>
+      {{ currentSegment }}
     </div>
     <ion-button class="arrival__explore-button" fill="clear">
       Explore more
@@ -42,8 +48,9 @@ import {
 import BaseSectionHeading from "@/components/base/BaseSectionHeading";
 import ProductItem from "@/components/homepage/ProductItem";
 import { IconForwardArrow } from "@/components/icons/index";
+import { ref } from "vue";
 
-const tabs = ["All", "Apparel", "Dress", "Tshirt", "Bag"];
+const segments = ["All", "Apparel", "Dress", "Tshirt", "Bag"];
 
 const products = [
   {
@@ -71,6 +78,12 @@ const products = [
     price: "$150",
   },
 ];
+
+let currentSegment = ref("All");
+
+const changeSegment = (e) => {
+  currentSegment = e.detail.value;
+};
 </script>
 
 <style lang="sass" scoped>
@@ -105,6 +118,9 @@ const products = [
 		flex-wrap: wrap
 		justify-content: space-around
 		margin-bottom: 28px
+		&_demo
+			height: 520px
+			align-items: center
 	&__explore-button
 		--color: black
 		font-size: 16px
