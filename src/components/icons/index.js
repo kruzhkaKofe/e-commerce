@@ -16,3 +16,4 @@ export { default as IconPhone } from "./icon.phone.vue";
 export { default as IconLocationPin } from "./icon.location-pin.vue";
 export { default as IconVoucher } from "./icon.voucher.vue";
 export { default as IconDelivery } from "./icon.delivery.vue";
+export { default as IconManikin } from "./icon.manikin.vue";

@@ -5,6 +5,7 @@ import OctoberCollection from "@/views/OctoberCollection";
 import CheckoutPage from "@/views/CheckoutPage";
 import ContactsPage from "@/views/ContactsPage";
 import AboutPage from "@/views/AboutPage";
+import ErrorPage from "@/views/ErrorPage";
 
 const routes = [
   {
@@ -42,6 +43,10 @@ const routes = [
   {
     path: "/about",
     component: AboutPage,
+  },
+  {
+    path: "/404",
+    component: ErrorPage,
   },
 ];
 

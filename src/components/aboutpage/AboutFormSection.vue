@@ -59,7 +59,6 @@ import { IconForwardArrow } from "@/components/icons/index";
 			text-transform: uppercase
 			color: #FCFCFC
 
-
 :deep(.submit__button__icon) path,
 :deep(.submit__button__icon) line
 	stroke: #FCFCFC

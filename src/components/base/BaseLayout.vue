@@ -4,8 +4,9 @@
     <base-header id="menu"></base-header>
     <ion-content>
       <slot></slot>
-      <base-footer v-if="footer"></base-footer>
+      <base-footer v-if="footer === true"></base-footer>
     </ion-content>
+    <base-footer v-if="footer === 'sticky'"></base-footer>
   </ion-page>
 </template>
 
@@ -17,7 +18,7 @@ import BaseMenus from "./BaseMenus.vue";
 
 const props = defineProps({
   footer: {
-    type: Boolean,
+    type: [Boolean, String],
     default: true,
   },
 });

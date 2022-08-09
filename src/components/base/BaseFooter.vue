@@ -48,6 +48,7 @@ a
 	font-size: 16px
 
 .footer
+	background-color: #FFFFFF
 	padding-top: 25px
 	display: flex
 	flex-direction: column
