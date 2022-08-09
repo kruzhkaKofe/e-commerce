@@ -10,52 +10,56 @@
         <ion-title class="title">Cart</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content>
-      <div class="content--empty" v-if="cart.length === 0">
-        You have no items in your Shopping Bag.
-      </div>
 
-      <div class="content" v-else>
-        <transition-group name="cart-item">
-          <base-cart-item
-            v-for="item in cart"
-            :key="item.id"
-            :item="item"
-            @decrement="decrement"
-            @increment="increment"
-            class="content__item"
-          />
-        </transition-group>
-      </div>
-    </ion-content>
-    
-    <ion-footer v-if="cart.length === 0">
-      <ion-menu-toggle class="result" menu="second">
-        <ion-button class="result__button">
-          <icon-shopping-bag class="result__shoopping-bag-icon" />
-          <p class="result__text">Continue shopping</p>
-        </ion-button>
-      </ion-menu-toggle>
-    </ion-footer>
-
-    <ion-footer v-else class="footer">
-      <div class="check">
-        <div class="check__description">
-          Sub total
-          <span class="check__amount">${{ fullAmount }}</span>
+    <template v-if="cart.length === 0">
+      <ion-content>
+        <div class="content content_empty">
+          You have no items in your Shopping Bag.
         </div>
-        <p class="check__notice">
-          *shipping charges, taxes and discount codes are calculated at the time
-          of accounting.
-        </p>
-      </div>
-      <ion-menu-toggle class="result" menu="second">
-        <ion-button class="result__button" @click="$router.push('/checkout')">
-          <icon-shopping-bag class="result__shoopping-bag-icon" />
-          <p class="result__text">Buy now</p>
-        </ion-button>
-      </ion-menu-toggle>
-    </ion-footer>
+      </ion-content>
+      <ion-footer class="footer">
+        <base-black-button class="result__button" @click="closeCart">
+          <icon-shopping-bag class="result__icon" />
+          Continue shopping
+        </base-black-button>
+      </ion-footer>
+    </template>
+
+    <template v-if="cart.length !== 0">
+      <ion-content>
+        <div class="content ion-padding">
+          <transition-group name="cart-item">
+            <base-cart-item
+              v-for="item in cart"
+              :key="item.id"
+              :item="item"
+              @decrement="decrement"
+              @increment="increment"
+              class="content__item"
+            />
+          </transition-group>
+        </div>
+      </ion-content>
+      <ion-footer class="footer">
+        <div class="check">
+          <div class="check__description">
+            Sub total
+            <span class="check__amount">${{ fullAmount }}</span>
+          </div>
+          <p class="check__notice">
+            *shipping charges, taxes and discount codes are calculated at the
+            time of accounting.
+          </p>
+        </div>
+        <base-black-button
+          class="result__button"
+          @click="$router.push('/checkout')"
+        >
+          <icon-shopping-bag class="result__icon" />
+          Buy now
+        </base-black-button>
+      </ion-footer>
+    </template>
   </ion-menu>
 </template>
 
@@ -69,10 +73,12 @@ import {
   IonButton,
   IonContent,
   IonTitle,
+  menuController,
 } from "@ionic/vue";
 
-import { IconClose, IconShoppingBag } from "@/components/icons/index.js";
 import BaseCartItem from "./BaseCartItem";
+import BaseBlackButton from "./BaseBlackButton";
+import { IconClose, IconShoppingBag } from "@/components/icons/index.js";
 import { useCart } from "@/stores/cart.js";
 import { storeToRefs } from "pinia";
 
@@ -86,6 +92,10 @@ const increment = (item) => {
 
 const decrement = (item) => {
   store.decrement(item);
+};
+
+const closeCart = async () => {
+  await menuController.close();
 };
 </script>
 
@@ -110,11 +120,10 @@ ion-header::after
 
 .content
 	height: 100%
-	padding: 0 15px
 	&__item
 		& + &
 			margin-top: 15px
-	&--empty
+	&_empty
 		height: 100%
 		display: flex
 		align-items: center
@@ -122,9 +131,6 @@ ion-header::after
 		color: #888888
 		font-size: 16px
 		line-height: 20px
-
-:deep(.result__shoopping-bag-icon) path
-	stroke: #FCFCFC
 
 .footer
 	background-color: #FFFFFF
@@ -151,16 +157,9 @@ ion-header::after
 		color: #888888
 
 .result
-	&__button
-		width: 100%
-		height: 56px
-		--background: black
-		--border-radius: none
-	&__text
-		font-size: 16px
-		line-height: 26px
-		letter-spacing: 0.01em
-		text-transform: uppercase
-		color: #FCFCFC
-		margin-left: 25px
+	&__icon
+		margin-right: 24px
+
+:deep(.result__icon) path
+	stroke: #FCFCFC
 </style>
