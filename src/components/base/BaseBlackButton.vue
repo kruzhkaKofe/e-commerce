@@ -1,6 +1,6 @@
 <template>
   <ion-button class="button">
-		
+		<slot></slot>
   </ion-button>
 </template>
 
@@ -10,6 +10,7 @@ import { IonButton } from "@ionic/vue";
 
 <style lang="sass" scoped>
 .button
+	height: 56px
 	width: 100%
 	font-size: 16px
 	line-height: 26px
