@@ -11,7 +11,7 @@
       </ion-toolbar>
     </ion-header>
 
-    <template v-if="cart.length === 0">
+    <template v-if="allCart.length === 0">
       <ion-content>
         <div class="content content_empty">
           You have no items in your Shopping Bag.
@@ -25,12 +25,12 @@
       </ion-footer>
     </template>
 
-    <template v-if="cart.length !== 0">
+    <template v-if="allCart.length !== 0">
       <ion-content>
         <div class="content ion-padding">
           <transition-group name="cart-item">
             <base-cart-item
-              v-for="item in cart"
+              v-for="item in allCart"
               :key="item.id"
               :item="item"
               @decrement="decrement"
@@ -84,7 +84,7 @@ import { storeToRefs } from "pinia";
 
 const store = useCart();
 
-const { cart, fullAmount } = storeToRefs(store);
+const { allCart, fullAmount } = storeToRefs(store);
 
 const increment = (item) => {
   store.increment(item);

@@ -2,16 +2,16 @@
   <div class="contact">
     <ion-img class="contact__image" :src="contact.icon" :alt="contact.id" />
     <p class="contact__text">{{ contact.text }}</p>
-    <ion-button
-      class="contact__button"
-      @click="$router.push('/#')"
+    <base-black-button-small
       v-if="contact.button_text"
-      >{{ contact.button_text }}</ion-button
+      @click="$router.push('/#')"
+      >{{ contact.button_text }}</base-black-button-small
     >
   </div>
 </template>
 
 <script setup>
+import BaseBlackButtonSmall from "@/components/base/BaseBlackButtonSmall";
 import { IonImg, IonButton } from "@ionic/vue";
 
 const props = defineProps({
@@ -33,15 +33,4 @@ const props = defineProps({
 		line-height: 20px
 		color: #333333
 		margin-bottom: 15px
-	&__button
-		backdrop-filter: blur(4px)
-		font-size: 16px
-		line-height: 24px
-		--padding-top: 8px
-		--padding-bottom: 8px
-		--padding-start: 30px
-		--padding-end: 30px
-		--background: #000000
-		--border-radius: 0
-		--color: #FCFCFC
 </style>

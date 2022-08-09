@@ -1,41 +1,47 @@
 <template>
-  <transition-group name="cart-item">
-    <base-cart-item
-      class="checkout__item"
-      v-for="item in cart"
-      :key="item.id"
-      :item="item"
-      @decrement="decrement"
-      @increment="increment"
-    />
-  </transition-group>
-  <ion-item-divider />
-  <ion-item class="checkout__promo">
-    <icon-voucher class="checkout__icon" />
-    <ion-input
-      class="checkout__input"
-      type="text"
-      placeholder="Add promo code"
-      clear-input
-    ></ion-input>
-  </ion-item>
-  <ion-item class="checkout__delivery">
-    <icon-delivery class="checkout__icon" />
-    <ion-label class="checkout__delivery-label">Delivery</ion-label>
-    <ion-select
-      class="checkout__select"
-      interface="action-sheet"
-      :interface-options="options"
-      value="Free"
-    >
-      <ion-select-option class="checkout__select-option" value="Free"
-        >Free</ion-select-option
+  <template v-if="cart.length !== 0">
+    <transition-group name="cart-item">
+      <base-cart-item
+        class="checkout__item"
+        v-for="item in cart"
+        :key="item.id"
+        :item="item"
+        @decrement="decrement"
+        @increment="increment"
+      />
+    </transition-group>
+    <ion-item-divider />
+    <ion-item class="checkout__promo">
+      <icon-voucher class="checkout__icon" />
+      <ion-input
+        class="checkout__input"
+        type="text"
+        placeholder="Add promo code"
+        clear-input
+      ></ion-input>
+    </ion-item>
+    <ion-item class="checkout__delivery">
+      <icon-delivery class="checkout__icon" />
+      <ion-label class="checkout__delivery-label">Delivery</ion-label>
+      <ion-select
+        class="checkout__select"
+        interface="action-sheet"
+        :interface-options="options"
+        value="Free"
       >
-      <ion-select-option class="checkout__select-option" value="Express"
-        >Express(+5.99$)</ion-select-option
-      >
-    </ion-select>
-  </ion-item>
+        <ion-select-option class="checkout__select-option" value="Free"
+          >Free</ion-select-option
+        >
+        <ion-select-option class="checkout__select-option" value="Express"
+          >Express(+5.99$)</ion-select-option
+        >
+      </ion-select>
+    </ion-item>
+  </template>
+
+  <template v-else>
+    <div class="checkout_empty">No items in cart.</div>
+  </template>
 </template>
 
 <script setup>
@@ -107,4 +113,12 @@ ion-item-divider
 	&__select
 		&-option
 			background: #FFFFFF
+	&_empty
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		color: #888888
+		font-size: 16px
+		line-height: 20px
 </style>

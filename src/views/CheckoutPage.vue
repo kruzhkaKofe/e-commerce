@@ -2,7 +2,7 @@
   <base-layout page-default-back-link="/home" :footer="false">
     <base-checkout-section :fullAmount="fullAmount">
       <checkout-content
-        :cart="cart"
+        :cart="allCart"
         @decrement="decrement"
         @increment="increment"
       />
@@ -19,7 +19,7 @@ import { useCart } from "@/stores/cart.js";
 import { storeToRefs } from "pinia";
 
 const store = useCart();
-const { cart, fullAmount } = storeToRefs(store);
+const { allCart, fullAmount } = storeToRefs(store);
 
 const increment = (item) => {
   store.increment(item);

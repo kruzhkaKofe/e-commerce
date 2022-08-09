@@ -4,22 +4,23 @@
       >Checkout</base-section-heading
     >
     <slot></slot>
-    <ion-footer class="checkout__footer">
-      <div class="checkout__amount ion-padding">
-        <span class="checkout__total">Est. total</span>
-        <span class="checkout__price">${{ fullAmount }}</span>
-      </div>
-      <ion-button class="button">
-        <icon-shopping-bag class="button__icon" slot="start" />
-        <span>Checkout</span>
-      </ion-button>
-    </ion-footer>
   </section>
+  <ion-footer class="checkout__footer">
+    <div class="checkout__amount ion-padding">
+      <span class="checkout__total">Est. total</span>
+      <span class="checkout__price">${{ fullAmount }}</span>
+    </div>
+    <base-black-button class="button">
+      <icon-shopping-bag class="button__icon" slot="start" />
+      <ion-label class="button__label">Checkout</ion-label>
+    </base-black-button>
+  </ion-footer>
 </template>
 
 <script setup>
 import BaseSectionHeading from "./BaseSectionHeading";
-import { IonFooter, IonButton } from "@ionic/vue";
+import BaseBlackButton from "./BaseBlackButton";
+import { IonFooter, IonButton, IonLabel, IonContent } from "@ionic/vue";
 import { IconShoppingBag } from "@/components/icons/index";
 
 const props = defineProps({
@@ -32,6 +33,7 @@ const props = defineProps({
 	position: relative
 	padding-top: 30px
 	padding-bottom: 130px
+	height: calc( 100% - 130px )
 	&__amount
 		display: flex
 		align-items: center
@@ -54,15 +56,6 @@ const props = defineProps({
 		right: 0
 
 .button
-	width: 100%
-	height: 56px
-	font-size: 16px
-	line-height: 26px
-	letter-spacing: 0.01em
-	text-transform: uppercase
-	--color: #FCFCFC
-	--background: #000000
-	--border-radius: 0
 	&__icon
 		margin-right: 24px
 :deep(.button__icon) path

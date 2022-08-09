@@ -13,20 +13,21 @@
           type="email"
           pattern="email"
           required="true"
-					inputmode="email"
-					id="email"
+          inputmode="email"
+          id="email"
         />
       </div>
-      <ion-button class="submit__button" type="submit">
-        <ion-label class="submit__button__label">Submit</ion-label>
-        <icon-forward-arrow class="submit__button__icon" />
-      </ion-button>
+      <base-black-button class="submit__button" type="submit">
+        Submit
+        <icon-forward-arrow class="submit__button__icon" slot="end" />
+      </base-black-button>
     </form>
   </section>
 </template>
 
 <script setup>
 import BaseSectionHeading from "@/components/base/BaseSectionHeading";
+import BaseBlackButton from "@/components/base/BaseBlackButton";
 import { IonInput, IonButton, IonLabel } from "@ionic/vue";
 import { IconForwardArrow } from "@/components/icons/index";
 </script>
@@ -46,18 +47,8 @@ import { IconForwardArrow } from "@/components/icons/index";
 		--padding-top: 16px
 		--padding-bottom: 16px
 		--color: #979797
-	&__button
-		height: 56px
-		width: 100%
-		--border-radius: 0
-		--background: #000000
-		&__label
-			margin-right: 24px
-			font-size: 14px
-			line-height: 24px
-			letter-spacing: 0.01em
-			text-transform: uppercase
-			color: #FCFCFC
+	&__button__icon
+		margin-left: 24px
 
 :deep(.submit__button__icon) path,
 :deep(.submit__button__icon) line

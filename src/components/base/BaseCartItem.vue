@@ -60,18 +60,14 @@ const decrement = (item) => {
 	height: 130px
 	box-shadow: none
 	border-radius: 0
-
 	&__image
 		width: 100px
 		height: 130px
 		margin-right: 10px
-
 	&__description
 		padding: 8px
-
 	&__header
 		margin-bottom: 12px
-
 	&__title
 		color: #000000
 		letter-spacing: 2px
@@ -79,27 +75,22 @@ const decrement = (item) => {
 		line-height: 20px
 		text-transform: uppercase
 		margin-bottom: 6px
-
 	&__subtitle
 		text-transform: capitalize
 		font-size: 12px
 		line-height: 18px
 		color: #555555
-
 	&__content
 		padding: 0
-
 	&__counter
 		display: flex
 		align-items: center
 		margin-bottom: 12px
-
 	&__amount
 		margin: 0 12px
 		font-size: 16px
 		line-height: 16px
 		color: #000000
-
 	&__button
 		width: 24px
 		height: 24px
@@ -115,7 +106,6 @@ const decrement = (item) => {
 		--border-width: 1px
 		--border-style: solid
 		--border-color: rgba(196, 196, 196, 0.8)
-
 	&__price
 		line-height: 24px
 		color: #DD8560

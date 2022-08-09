@@ -47,6 +47,10 @@ export const useCart = defineStore("cart", {
   }),
 
   getters: {
+    allCart() {
+      return this.cart;
+    },
+
     fullAmount() {
       const amount = this.cart.reduce((result, item) => {
         return result + item.volume * item.price;
