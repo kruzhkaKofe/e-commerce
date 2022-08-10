@@ -177,6 +177,7 @@ ion-header::after
 
 .segment
 	--background: #FFFFFF
+	margin-bottom: 20px
 	&__button
 		width: calc(100%/3)
 		font-size: 14px
@@ -186,20 +187,26 @@ ion-header::after
 		--color: rgba(136, 136, 136, 0.8)
 		--color-checked: #212806
 		--ripple-color: transparent
+		&::part(native)
+			height: 56px
 		&::part(indicator)
 			position: relative
 			padding-bottom: 8.5px
 		&::part(indicator)::before
 			position: absolute
+			content: ''
 			bottom: 5px
 			background-color: #DD8560
-			content: ''
 			width: 10px
 			height: 10px
 			left: calc(50%)
 			transform: translate(-50%) rotate(45deg)
 		&::part(indicator-background)
 			background-color: #DD8560
+		
+.ios .segment__button::part(indicator)
+	inset: 100% 0px 0px -50%
+	transform: translate(0%, -100%)
 
 .accordion
 	background: #FFFFFF

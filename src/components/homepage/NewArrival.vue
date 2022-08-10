@@ -21,7 +21,7 @@
     <div class="arrival__list" v-if="currentSegment === 'All'">
       <product-item
         v-for="product in products"
-        :key="product.id"	
+        :key="product.id"
         :product="product"
       />
     </div>
@@ -88,7 +88,7 @@ const changeSegment = (e) => {
 
 <style lang="sass" scoped>
 .arrival
-	padding: 35px 0
+	padding: 30px 0
 	color: black
 	text-align: center
 	border: none
@@ -103,10 +103,13 @@ const changeSegment = (e) => {
 			--color: rgba(136, 136, 136, 0.8)
 			--color-checked: #212806
 			--ripple-color: transparent
+			min-width: auto
+			&::part(native)
+				height: 48px
 			&::part(indicator)
 				content: url('/public/assets/icons/tabs-underline.svg')
-				width: 10px
-				left: calc(50% - 5px)
+				width: 12px
+				left: calc(50% - 6px)
 			&::part(indicator-background)
 				background-color: #DD8560
 		&-label
@@ -128,4 +131,8 @@ const changeSegment = (e) => {
 		--ripple-color: #DD8560
 		&__icon
 			margin-left: 8px
+
+.ios .arrival__segment-button::part(indicator)
+	inset: 100% 0px 0px 50%
+	transform: translate(-50%, -100%)
 </style>
