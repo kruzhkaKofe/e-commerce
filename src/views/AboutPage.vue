@@ -1,7 +1,7 @@
 <template>
-  <base-layout :footer="false">
-    <about-section/>
-    <about-form-section/>
+  <base-layout page-default-back-link="/home" :footer="false">
+    <about-section />
+    <about-form-section />
   </base-layout>
 </template>
 

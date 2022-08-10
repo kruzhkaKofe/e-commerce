@@ -1,5 +1,5 @@
 <template>
-  <base-layout>
+  <base-layout page-default-back-link="/home">
     <contacts-section :contacts="contacts" />
   </base-layout>
 </template>

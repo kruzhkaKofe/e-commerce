@@ -1,5 +1,5 @@
 <template>
-  <base-layout :footer="'sticky'">
+  <base-layout page-default-back-link="/home" :footer="'sticky'">
     <error-section />
   </base-layout>
 </template>

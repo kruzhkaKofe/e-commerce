@@ -2,11 +2,14 @@
   <ion-menu side="start" content-id="menu" menu-id="main">
     <ion-header>
       <ion-toolbar class="toolbar">
-        <ion-menu-toggle slot="start" menu="main" autoHide="false">
-          <ion-button class="close-button">
-            <icon-close></icon-close>
-          </ion-button>
-        </ion-menu-toggle>
+        <ion-button
+          class="close-button"
+          slot="start"
+          id="main"
+          @click="closeMainMenu"
+        >
+          <icon-close></icon-close>
+        </ion-button>
       </ion-toolbar>
     </ion-header>
     <ion-content>
@@ -95,6 +98,7 @@ import {
   IonList,
   IonItem,
   IonLabel,
+  menuController,
 } from "@ionic/vue";
 
 import {
@@ -169,6 +173,10 @@ const accordions = [
     ],
   },
 ];
+
+const closeMainMenu = async () => {
+  await menuController.close("main");
+};
 </script>
 
 <style lang="sass" scoped>
@@ -211,6 +219,8 @@ ion-header::after
 
 .accordion
 	background: #FFFFFF
+	&__item
+		--border-width: 0
 	&__label
 		font-size: 16px
 		line-height: 48px

@@ -2,11 +2,9 @@
   <ion-menu side="end" content-id="menu" menu-id="cart" class="cart">
     <ion-header>
       <ion-toolbar class="toolbar">
-        <ion-menu-toggle slot="start" menu="cart" autoHide="false">
-          <ion-button class="close-button">
-            <icon-close></icon-close>
-          </ion-button>
-        </ion-menu-toggle>
+        <ion-button class="close-button" slot="start" @click="closeCart">
+          <icon-close></icon-close>
+        </ion-button>
         <ion-title class="title">Cart</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -69,7 +67,6 @@ import {
   IonHeader,
   IonFooter,
   IonToolbar,
-  IonMenuToggle,
   IonButton,
   IonContent,
   IonTitle,
@@ -95,7 +92,7 @@ const decrement = (item) => {
 };
 
 const closeCart = async () => {
-  await menuController.close();
+  await menuController.close("cart");
 };
 </script>
 
