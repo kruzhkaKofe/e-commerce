@@ -29,7 +29,7 @@ const props = defineProps({
 
 <style lang="sass" scoped>
 .swiper
-	padding-left: 16px
+	padding: 0 16px
 	margin-bottom: 16px
 	&__slide
 		width: auto

@@ -1,12 +1,12 @@
 <template>
   <base-layout page-default-back-link="/home">
-    <collection-section :collections="collections" />
+    <collections-section :collections="collections" />
   </base-layout>
 </template>
 
 <script setup>
 import BaseLayout from "@/components/base/BaseLayout";
-import CollectionSection from "@/components/collectionspage/CollectionSection";
+import CollectionsSection from "@/components/collectionspage/CollectionsSection";
 import { useCollections } from "@/stores/collections.js";
 
 const store = useCollections();

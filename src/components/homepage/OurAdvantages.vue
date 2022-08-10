@@ -1,5 +1,5 @@
 <template>
-  <div class="advantages">
+  <div class="advantages ion-padding">
     <ion-img
       class="advantages__logo"
       src="/assets/icons/Logo.png"
@@ -39,11 +39,12 @@ const props = defineProps({
 
 <style lang="sass" scoped>
 .advantages
-	padding: 30px 15px
-	background: rgba(242, 242, 242, 0.5)
+	padding-top: 30px
+	padding-bottom: 30px 
 	display: flex
 	flex-direction: column
 	align-items: center
+	background: rgba(242, 242, 242, 0.5)
 	&__logo
 		height: 40px
 		width: 96px

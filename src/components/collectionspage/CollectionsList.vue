@@ -1,5 +1,5 @@
 <template>
-  <ion-list class="october__list">
+  <ion-list class="october__list ion-padding">
     <collection-item
       class="october__item"
       v-for="collection in collections"
@@ -20,13 +20,10 @@ const props = defineProps({
 
 <style lang="sass" scoped>
 .october
-	position: relative
-	background-color: #000000
-	padding: 120px 16px 60px
-	z-index: 10
 	&__list
 		background: #000000
-		padding: 0
+		padding-top: 0
+		padding-bottom: 0
 	&__item
 		& + &
 			margin-top: 40px

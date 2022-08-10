@@ -1,5 +1,5 @@
 <template>
-  <section class="arrival">
+  <section class="arrival ion-padding">
     <base-section-heading>New Arrival</base-section-heading>
     <ion-segment
       class="arrival__segment"
@@ -20,6 +20,7 @@
     </ion-segment>
     <div class="arrival__list" v-if="currentSegment === 'All'">
       <product-item
+        class="arrival__item"
         v-for="product in products"
         :key="product.id"
         :product="product"
@@ -88,7 +89,6 @@ const changeSegment = (e) => {
 
 <style lang="sass" scoped>
 .arrival
-	padding: 30px 0
 	color: black
 	text-align: center
 	border: none
@@ -103,6 +103,7 @@ const changeSegment = (e) => {
 			--color: rgba(136, 136, 136, 0.8)
 			--color-checked: #212806
 			--ripple-color: transparent
+			--border-width: 0px
 			min-width: auto
 			&::part(native)
 				height: 48px
@@ -119,11 +120,16 @@ const changeSegment = (e) => {
 	&__list
 		display: flex
 		flex-wrap: wrap
-		justify-content: space-around
+		justify-content: space-between
 		margin-bottom: 28px
 		&_demo
 			height: 520px
 			align-items: center
+			justify-content: center
+	&__item
+		margin-bottom: 16px
+		&:nth-last-child(-n+2)
+			margin-bottom: 0
 	&__explore-button
 		--color: black
 		font-size: 16px

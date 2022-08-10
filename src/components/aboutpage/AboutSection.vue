@@ -24,7 +24,6 @@ import { IonImg } from "@ionic/vue";
 
 <style lang="sass" scoped>
 .about
-	padding: 30px 0
 	&__text
 		text-align: justify
 		font-size: 16px

@@ -30,7 +30,6 @@ import BaseSectionHeading from "@/components/base/BaseSectionHeading";
 
 <style lang="sass" scoped>
 .collection
-	padding: 20px 0
 	display: flex
 	flex-direction: column
 	align-items: center

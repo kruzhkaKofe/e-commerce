@@ -1,12 +1,12 @@
 <template>
-  <div class="brands">
+  <div class="brands ion-padding">
     <icon-stick class="brands__stick"></icon-stick>
     <div class="brands__list">
-      <brand-item
+      <brands-list-item
         v-for="brand in brands"
         :key="brand.id"
         :brand="brand"
-      ></brand-item>
+      ></brands-list-item>
     </div>
     <icon-stick class="brands__stick"></icon-stick>
   </div>
@@ -14,7 +14,7 @@
 
 <script setup>
 import { IconStick } from "@/components/icons/index";
-import BrandItem from "@/components/homepage/BrandItem";
+import BrandsListItem from "@/components/homepage/BrandsListItem";
 
 const props = defineProps({
   brands: Array,
@@ -23,12 +23,14 @@ const props = defineProps({
 
 <style lang="sass" scoped>
 .brands
+	padding-top: 16px
+	padding-bottom: 16px
 	display: flex
 	flex-direction: column
 	align-items: center
-	padding: 15px 0
 	&__list
-		padding: 20px 0
+		padding-top: 20px
+		padding-bottom: 20px
 		display: flex
 		align-items: center
 		justify-content: space-between

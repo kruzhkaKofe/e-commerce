@@ -21,7 +21,7 @@ const routes = [
     component: BlogPage,
   },
   {
-    path: "/blog/:id",
+    path: "/blogs/:id",
     component: () => import("@/views/BlogDetails"),
   },
   {

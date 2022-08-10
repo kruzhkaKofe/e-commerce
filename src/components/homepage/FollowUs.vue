@@ -1,5 +1,5 @@
 <template>
-  <section class="follow">
+  <section class="follow ion-padding">
     <base-section-heading :stick="false">Follow Us</base-section-heading>
     <router-link class="follow__link" to="/#">
       <icon-instagram></icon-instagram>
@@ -38,7 +38,8 @@ const props = defineProps({
 	display: flex
 	flex-direction: column
 	align-items: center
-	padding: 20px 17px
+	padding-top: 30px
+	padding-bottom: 30px
 	&__link
 		margin-top: -15px
 		width: 24px

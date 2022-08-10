@@ -39,16 +39,13 @@ const numOfCollection = computed(() => {
 	--inner-padding-end: 0
 	--inner-border-width: 0
 	--highlight-height: 0
-
 	&::part(native)
 		display: flex
 		flex-direction: column
 		padding: 0
-
 	&__cover
 		width: 361px
 		height: 480px
-
 	&__footer
 		width: 100%
 		display: flex
@@ -61,15 +58,12 @@ const numOfCollection = computed(() => {
 		mix-blend-mode: normal
 		font-size: 14px
 		padding: 10px 0
-
 	&__number
 		font-family: 'Bodoni Moda', serif
 		font-weight: 900
-
 	&__title
 		font-size: 14px
 		white-space: nowrap
-
 	&__line
 		border: 1px solid #FFFFFF
 		opacity: 0.2

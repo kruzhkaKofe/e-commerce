@@ -1,13 +1,13 @@
 <template>
-  <base-october-section class="section">
-    <ion-img
-      class="section__image"
-      :src="collection.cover"
-      :alt="collection.title"
-    />
-    <collection-products-list class="section__list" :collection="collection" />
-    <collection-may-like :otherCollections="otherCollections" />
-  </base-october-section>
+	<base-october-section class="section ion-padding">
+		<ion-img
+			class="section__image"
+			:src="collection.cover"
+			:alt="collection.title"
+		/>
+		<collection-products-list class="section__list" :collection="collection" />
+	</base-october-section>
+	<collection-may-like :otherCollections="otherCollections" />
 </template>
 
 <script setup>
@@ -17,18 +17,17 @@ import CollectionMayLike from "@/components/collectionspage/CollectionMayLike";
 import { IonImg } from "@ionic/vue";
 
 const props = defineProps({
-  collection: Object,
-  otherCollections: Array,
+	collection: Object,
+	otherCollections: Array,
 });
 </script>
 
 <style lang="sass" scoped>
 .section
-  &__image
-    position: relative
-    z-index: 10
-    margin-bottom: 30px
-    height: 480px
-  &__list
-    margin-bottom: 40px
+	&__image
+		object-fit: cover
+		position: relative
+		z-index: 10
+		margin-bottom: 30px
+		height: 480px
 </style>

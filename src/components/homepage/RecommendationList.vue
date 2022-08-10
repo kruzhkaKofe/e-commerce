@@ -4,7 +4,7 @@
     <swiper
       class="recommendation__swiper"
       :slidesPerView="'auto'"
-      :spaceBetween="15"
+      :spaceBetween="16"
       :modules="modules"
       :pagination="{
         el: '.recommendation__pagination',
@@ -47,10 +47,8 @@ const props = defineProps({
 
 <style lang="sass" scoped>
 .recommendation
-	padding: 30px 0
 	&__swiper
-		padding: 20px 0
-		padding-left: 15px
+		padding: 20px 16px
 	&__item
 		width: 255px
 		height: 390px

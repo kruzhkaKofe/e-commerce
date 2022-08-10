@@ -1,8 +1,8 @@
 <template>
-  <div class="may-like">
+  <section class="may-like">
     <base-section-heading>You may also like</base-section-heading>
     <collection-may-like-slider :otherCollections="otherCollections" />
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -15,8 +15,10 @@ const props = defineProps({
 </script>
 
 <style lang="sass" scoped>
+.may-like 
+  background-color: #000000
 :deep(.base__icon-stick) path
-	fill: #FCFCFC
+  fill: #FCFCFC
 :deep(.base__heading)
-	color: #FCFCFC
+  color: #FCFCFC
 </style>

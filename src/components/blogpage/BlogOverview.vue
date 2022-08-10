@@ -5,11 +5,18 @@
       :src="blog.image"
       :alt="blog.title"
     ></ion-img>
-    <div class="article__content">
+    <div class="article__content ion-padding">
       <h3 class="article__title">{{ blog.title }}</h3>
-      <p class="article__text_before">{{ blog.contentBefore }}</p>
-      <blog-overview-slider :images="blog.sliderImages"></blog-overview-slider>
-      <p class="article__text_after">{{ blog.contentAfter }}</p>
+      <p class="article__text_before" v-if="blog.contentBefore">
+        {{ blog.contentBefore }}
+      </p>
+      <blog-overview-slider
+        v-if="blog.sliderImages"
+        :images="blog.sliderImages"
+      ></blog-overview-slider>
+      <p class="article__text_after" v-if="blog.contentAfter">
+        {{ blog.contentAfter }}
+      </p>
       <div class="article__info">
         <span class="article__author">Posted by {{ blog.author }}</span>
         <span class="article__create-date">{{ blog.date }}</span>
@@ -35,41 +42,35 @@ const props = defineProps({
 <style lang="sass" scoped>
 .article
 	&__content
-		padding: 16px
 		font-size: 14px
 		line-height: 24px
-
 	&__title
 		font-size: 14px
 		line-height: 24px
 		text-transform: uppercase
 		margin-bottom: 10px
 		color: #000000
-
 	&__text_before,
 	&__text_after
 		color: #333333
 		text-align: justify
-
 	&__info
 		color: #555555
 		margin-top: 30px
 		margin-bottom: 10px
 		display: flex
 		align-items: center
-
 	&__author
 		padding-right: 10px
 		border-right: 1px solid #555555
 		margin-right: 10px
-
 	&__tags
 		display: flex
 		align-items: center
+		justify-content: space-between
 		flex-wrap: wrap
-
 	&__tag
-		margin-right: 10px
+		// margin-right: 10px
 		margin-bottom: 10px
 		--background: transparent
 		--color: #888888

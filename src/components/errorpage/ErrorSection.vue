@@ -1,5 +1,5 @@
 <template>
-  <section class="error">
+  <section class="error ion-padding">
     <base-section-heading :stick="false" class="error__heading">Page not found</base-section-heading>
     <error-item class="error__item"></error-item>
   </section>
@@ -12,7 +12,6 @@ import ErrorItem from './ErrorItem'
 
 <style lang="sass" scoped>
 .error
-  padding: 30px 0
   &__heading
     margin-bottom: 60px
 </style>

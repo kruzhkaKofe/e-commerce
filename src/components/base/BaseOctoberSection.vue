@@ -17,7 +17,8 @@
 .october
 	position: relative
 	background-color: #000000
-	padding: 120px 16px 60px
+	padding-top: 120px !important
+	// padding-bottom: 60px
 	z-index: 10
 	&__block
 		position: absolute

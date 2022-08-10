@@ -1,5 +1,5 @@
 <template>
-  <section class="contacts">
+  <section class="contacts ion-padding">
     <base-section-heading class="contacts__heading"
       >Contact us</base-section-heading
     >
@@ -22,9 +22,3 @@ const props = defineProps({
 });
 </script>
 
-<style lang="sass" scoped>
-.contacts
-	padding: 30px 0
-	&__list
-		padding: 0 16px
-</style>
