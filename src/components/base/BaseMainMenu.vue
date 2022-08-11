@@ -2,14 +2,11 @@
   <ion-menu side="start" content-id="menu" menu-id="main">
     <ion-header>
       <ion-toolbar class="toolbar">
-        <ion-button
-          class="close-button"
-          slot="start"
-          id="main"
-          @click="closeMainMenu"
-        >
-          <icon-close></icon-close>
-        </ion-button>
+        <ion-buttons slot="start">
+          <ion-button class="close-button" id="main" @click="closeMainMenu">
+            <icon-close></icon-close>
+          </ion-button>
+        </ion-buttons>
       </ion-toolbar>
     </ion-header>
     <ion-content>

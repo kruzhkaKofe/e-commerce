@@ -2,9 +2,11 @@
   <ion-menu side="end" content-id="menu" menu-id="cart" class="cart">
     <ion-header>
       <ion-toolbar class="toolbar">
-        <ion-button class="close-button" slot="start" @click="closeCart">
-          <icon-close></icon-close>
-        </ion-button>
+        <ion-buttons slot="start">
+          <ion-button class="close-button" @click="closeCart">
+            <icon-close></icon-close>
+          </ion-button>
+        </ion-buttons>
         <ion-title class="title">Cart</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -68,6 +70,7 @@ import {
   IonFooter,
   IonToolbar,
   IonButton,
+  IonButtons,
   IonContent,
   IonTitle,
   menuController,
