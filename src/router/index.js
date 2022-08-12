@@ -3,6 +3,7 @@ import HomePage from "@/views/HomePage";
 import BlogPage from "@/views/BlogPage";
 import OctoberCollection from "@/views/OctoberCollection";
 import CheckoutPage from "@/views/CheckoutPage";
+import PlaceOrderPage from "@/views/PlaceOrderPage";
 import ContactsPage from "@/views/ContactsPage";
 import AboutPage from "@/views/AboutPage";
 import ErrorPage from "@/views/ErrorPage";
@@ -35,6 +36,10 @@ const routes = [
   {
     path: "/checkout",
     component: CheckoutPage,
+  },
+  {
+    path: "/order",
+    component: PlaceOrderPage,
   },
   {
     path: "/contacts",

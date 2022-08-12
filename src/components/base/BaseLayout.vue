@@ -6,6 +6,7 @@
       <base-footer v-if="footer === true"></base-footer>
     </ion-content>
     <base-footer v-if="footer === 'sticky'"></base-footer>
+    <slot name="custom-footer"/>
   </ion-page>
 </template>
 

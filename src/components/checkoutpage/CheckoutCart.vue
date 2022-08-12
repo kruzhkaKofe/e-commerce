@@ -2,7 +2,7 @@
   <template v-if="cart.length !== 0">
     <transition-group name="cart-item">
       <base-cart-item
-        class="checkout__item"
+        class="checkout__cart-item"
         v-for="item in cart"
         :key="item.id"
         :item="item"
@@ -11,7 +11,7 @@
       />
     </transition-group>
     <ion-item-divider />
-    <ion-item class="checkout__promo">
+    <ion-item class="checkout__promo checkout__action">
       <icon-voucher class="checkout__icon" />
       <ion-input
         class="checkout__input"
@@ -20,7 +20,7 @@
         clear-input
       ></ion-input>
     </ion-item>
-    <ion-item class="checkout__delivery">
+    <ion-item class="checkout__delivery checkout__action">
       <icon-delivery class="checkout__icon" />
       <ion-label class="checkout__delivery-label">Delivery</ion-label>
       <ion-select
@@ -38,7 +38,6 @@
       </ion-select>
     </ion-item>
   </template>
-
   <template v-else>
     <div class="checkout_empty">No items in cart.</div>
   </template>
@@ -72,7 +71,7 @@ const decrement = (item) => {
 
 const options = {
   header: "Delivery",
-  subHeader: "Select delivery option",
+  subHeader: "Select delivery option"
 };
 </script>
 
@@ -95,12 +94,13 @@ ion-item-divider
 	--ion-item-border-color: rgba(0, 0, 0, 0.1)
 
 .checkout
-	&__item
+	&__cart-item
 		& + &
 			margin-top: 15px
 	&__icon
 		margin-right: 10px
-	&__promo
+	&__action
+		--background-activated: #DD8560
 		--highlight-color-focused: #DD8560
 	&__input,
 	&__delivery
@@ -108,11 +108,6 @@ ion-item-divider
 		line-height: 16px
 		color: #333333
 		--placeholder-opacity: 1
-	&__delivery
-		--highlight-color-focused: #DD8560
-	&__select
-		&-option
-			background: #FFFFFF
 	&_empty
 		height: 100%
 		display: flex
@@ -121,4 +116,13 @@ ion-item-divider
 		color: #888888
 		font-size: 16px
 		line-height: 20px
+
+.ios
+	& .checkout__action
+		--padding-start: 0
+	& .checkout__action::part(native)
+		--inner-padding-start: 15px
+		--inner-padding-end: 15px
+	& .checkout__select::part(icon)
+		width: 20px
 </style>

@@ -97,6 +97,7 @@ const decrement = (item) => {
 		display: flex
 		align-items: center
 		justify-content: center
+		--background-focused: #DD8560
 		--padding-top: 4px
 		--padding-bottom: 4px
 		--padding-end: 4px

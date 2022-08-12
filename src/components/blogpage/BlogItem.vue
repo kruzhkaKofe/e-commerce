@@ -1,21 +1,19 @@
 <template>
-  <ion-item class="item" :router-link="`/blogs/${blog.id}`">
-    <div class="item__cover">
-      <ion-img class="item__image" :src="blog.image" :alt="blog.id"></ion-img>
-      <div class="item__title">
-        <h3 class="item__title__text">{{ blog.title }}</h3>
+  <ion-item class="blog" :router-link="`/blogs/${blog.id}`">
+    <div class="blog__cover">
+      <ion-img class="blog__image" :src="blog.image" :alt="blog.id"></ion-img>
+      <div class="blog__title">
+        <h3 class="blog__title__text">{{ blog.title }}</h3>
       </div>
-      <ion-checkbox class="item__add-favourite">
-        <icon-bookmark class="item__bookmark" />
-      </ion-checkbox>
+      <ion-checkbox class="blog__add-favourite"></ion-checkbox>
     </div>
-    <div class="item__info" @click.prevent>
-      <div class="item__tags">
-        <ion-chip class="item__chip" v-for="(tag, i) in blog.tags" :key="i">
+    <div class="blog__info">
+      <div class="blog__tags">
+        <ion-chip class="blog__chip" v-for="(tag, i) in blog.tags" :key="i">
           <ion-label>{{ tag }}</ion-label>
         </ion-chip>
       </div>
-      <span class="item__create-date">{{ blog.date }}</span>
+      <span class="blog__create-date">{{ blog.date }}</span>
     </div>
   </ion-item>
 </template>
@@ -30,11 +28,12 @@ const props = defineProps({
 </script>
 
 <style lang="sass" scoped>
-.item
+.blog
 	--inner-padding-end: 0
 	--inner-border-width: 0
 	--background: #FFFFFF
 	width: 100%
+	max-width: 350px
 	margin-bottom: 28px
 	&:last-child
 		margin-bottom: 0
@@ -67,12 +66,34 @@ const props = defineProps({
 			letter-spacing: 2px
 	&__add-favourite
 		position: absolute
-		top: 13px
-		right: 13px
-		--background: #FFFFFF
+		top: 10px
+		right: 15px
+		// --background: #FFFFFF
 		--border-width: 0
 		--background-hover: transparent
-		--background-checked: #DD8560
+		--checkmark-width: 0
+		&::part(container)
+			display: flex
+			align-items: center
+			justify-content: cente
+			// position: relative
+			width: 24px
+			height: 24px
+			background-image: url('/public/assets/icons/Bookmark.svg')
+			background-size: cover
+			background-color: transparent
+		&:checked &::part(container)
+			background-image: url('/public/assets/icons/Bookmark.svg')
+
+		// &::part(mark)
+			// width: 24px
+			// height: 24px
+			// position: absolute
+			// top: 0
+			// left: 0
+			// d: path("M9 12.5366L15 16.7033V2.94141H3V16.7033L9 12.5366Z")
+			// stroke: #DD8560
+			// fill: #DD8560
 
 	&__info
 		width: 100%
@@ -83,12 +104,10 @@ const props = defineProps({
 		font-size: 12px
 		line-height: 20px
 		color: #888888
-
 	&__tags
 		max-width: 265px
 		max-height: 70px
 		overflow: hidden
-
 	&__chip
 		margin-bottom: 3px
 		padding: 2px 6px
@@ -96,11 +115,6 @@ const props = defineProps({
 		--color: #888888
 		--background: transparent
 		margin-right: 5px
-
 		&:last-child
 			margin-right: 0
-
-// .favourite :deep(.item__bookmark) path
-// 	fill: #DD8560
-// 	stroke: #DD8560
 </style>
