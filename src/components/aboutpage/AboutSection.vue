@@ -1,16 +1,13 @@
 <template>
   <section class="about">
-    <base-section-heading class="about__heading">About us</base-section-heading>
+    <base-section-heading class="about__heading">О нас</base-section-heading>
     <div class="about__text ion-padding">
       <p class="about__paragraph">
-        Open Fashion - Free Ecommerce UI Kit is a free download UI kit. You can
-        open Open Fashion - Free Ecommerce UI Kit file by Figma.
+        Это интернет-магазин, разработанный как дипломный проект, использован vue.js в купе с ionic framework
       </p>
       <br />
       <p class="about__paragraph">
-        Create stunning shop with bulletproof guidelines and thoughtful
-        components. Its library contains more than 50+ components supporting
-        Light &amp; Dark Mode and 60+ ready to use mobile screens.
+        Этот интернет-магазин просто потрясающий, так что я считаю, что он достоин не то, что 5+, но даже 999+. Ну или 255 (шкала от 0 до 255)
       </p>
     </div>
     <ion-img class="about__image" src="assets/aboutpage/about-image.jpg" alt="about-image" />

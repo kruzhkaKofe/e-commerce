@@ -14,20 +14,20 @@
     <icon-stick></icon-stick>
     <address class="footer__contacts">
       <router-link class="footer__contacts__item" to="/#"
-        >support@openui.design</router-link
+        >mail@example.com</router-link
       >
       <router-link class="footer__contacts__item" to="/#"
-        >+60 825 876</router-link
+        >+7-(800)-555-35-35</router-link
       >
-      <span class="footer__contacts__item">08:00 - 22:00 - Everyday</span>
+      <span class="footer__contacts__item">08:00 - 22:00 - Ежедневно</span>
     </address>
     <icon-stick></icon-stick>
     <nav class="footer__nav">
-      <router-link to="/about" class="footer__nav__link">About</router-link>
-      <router-link to="/contacts" class="footer__nav__link">Contacts</router-link>
-      <router-link to="/blogs" class="footer__nav__link">Blogs</router-link>
+      <router-link to="/about" class="footer__nav__link">О нас</router-link>
+      <router-link to="/contacts" class="footer__nav__link">Контакты</router-link>
+      <router-link to="/blogs" class="footer__nav__link">Блоги</router-link>
     </nav>
-    <div class="footer__copyright">Copyright© OpenUI All Rights Reserved.</div>
+    <div class="footer__copyright">Copyright© All Rights Reserved.</div>
   </ion-footer>
 </template>
 

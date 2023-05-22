@@ -1,6 +1,6 @@
 <template>
   <section class="arrival ion-padding">
-    <base-section-heading>New Arrival</base-section-heading>
+    <base-section-heading>Новое поступление</base-section-heading>
     <ion-segment
       class="arrival__segment"
       :swipeGesture="false"
@@ -18,7 +18,39 @@
         </ion-label>
       </ion-segment-button>
     </ion-segment>
-    <div class="arrival__list" v-if="currentSegment === 'All'">
+    <div class="arrival__list" v-if="currentSegment === 'Все'">
+      <product-item
+        class="arrival__item"
+        v-for="product in products"
+        :key="product.id"
+        :product="product"
+      />
+    </div>
+    <div class="arrival__list" v-else-if="currentSegment === 'Одежда'">
+      <product-item
+        class="arrival__item"
+        v-for="product in products2"
+        :key="product.id"
+        :product="product"
+      />
+    </div>
+    <div class="arrival__list" v-else-if="currentSegment === 'Платья'">
+      <product-item
+        class="arrival__item"
+        v-for="product in products3"
+        :key="product.id"
+        :product="product"
+      />
+    </div>
+    <div class="arrival__list" v-else-if="currentSegment === 'Футболки'">
+      <product-item
+        class="arrival__item"
+        v-for="product in products2"
+        :key="product.id"
+        :product="product"
+      />
+    </div>
+    <div class="arrival__list" v-else-if="currentSegment === 'Сумки'">
       <product-item
         class="arrival__item"
         v-for="product in products"
@@ -29,8 +61,8 @@
     <div class="arrival__list arrival__list_demo" v-else>
       {{ currentSegment }}
     </div>
-    <ion-button class="arrival__explore-button" fill="clear">
-      Explore more
+    <ion-button class="arrival__explore-button" fill="clear" href="/october-collection">
+      Узнать больше
       <icon-forward-arrow
         class="arrival__explore-button__icon"
       ></icon-forward-arrow>
@@ -51,36 +83,89 @@ import ProductItem from "@/components/homepage/ProductItem";
 import { IconForwardArrow } from "@/components/icons/index";
 import { ref } from "vue";
 
-const segments = ["All", "Apparel", "Dress", "Tshirt", "Bag"];
+const segments = ["Все", "Одежда", "Платья", "Футболки", "Сумки"];
 
 const products = [
   {
     id: 1,
     image: "/assets/homepage/arrivals/1-item.jpg",
-    title: "21WN reversible angora cardigan",
-    price: "$120",
+    title: "двусторонний кардиган из ангоры 21WN",
+    price: "120Тг",
   },
   {
     id: 2,
     image: "/assets/homepage/arrivals/2-item.jpg",
-    title: "21WN reversible angora cardigan",
-    price: "$130",
+    title: "двусторонний кардиган из ангоры 21WN",
+    price: "130тг",
   },
   {
     id: 3,
     image: "/assets/homepage/arrivals/3-item.jpg",
-    title: "21WN reversible angora cardigan",
-    price: "$140",
+    title: "двусторонний кардиган из ангоры 21WN",
+    price: "140тг",
   },
   {
     id: 4,
     image: "/assets/homepage/arrivals/4-item.jpg",
     title: "Oblong bag",
-    price: "$150",
+    price: "150тг",
   },
 ];
 
-let currentSegment = ref("All");
+const products2 = [
+  {
+    id: 1,
+    image: "/assets/homepage/arrivals/2-item.jpg",
+    title: "двусторонний кардиган из ангоры 21WN 2",
+    price: "120тг",
+  },
+  {
+    id: 2,
+    image: "/assets/homepage/arrivals/1-item.jpg",
+    title: "двусторонний кардиган из ангоры 21WN 2",
+    price: "130тг",
+  },
+  {
+    id: 3,
+    image: "/assets/homepage/arrivals/3-item.jpg",
+    title: "двусторонний кардиган из ангоры 21WN 2",
+    price: "140тг",
+  },
+  {
+    id: 4,
+    image: "/assets/homepage/arrivals/4-item.jpg",
+    title: "Oblong bag 2",
+    price: "150тг",
+  },
+];
+const products3 = [
+  {
+    id: 1,
+    image: "/assets/homepage/arrivals/3-item.jpg",
+    title: "двусторонний кардиган из ангоры 21WN 2",
+    price: "120тг",
+  },
+  {
+    id: 2,
+    image: "/assets/homepage/arrivals/1-item.jpg",
+    title: "двусторонний кардиган из ангоры 21WN 2",
+    price: "130тг",
+  },
+  {
+    id: 3,
+    image: "/assets/homepage/arrivals/2-item.jpg",
+    title: "двусторонний кардиган из ангоры 21WN 2",
+    price: "140тг",
+  },
+  {
+    id: 4,
+    image: "/assets/homepage/arrivals/4-item.jpg",
+    title: "Oblong bag 2",
+    price: "150тг",
+  },
+];
+
+let currentSegment = ref("Все");
 
 const changeSegment = (e) => {
   currentSegment = e.detail.value;

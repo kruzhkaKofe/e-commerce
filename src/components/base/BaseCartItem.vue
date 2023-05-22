@@ -18,7 +18,7 @@
             <icon-plus />
           </ion-button>
         </div>
-        <span class="card__price">${{ item.price }}</span>
+        <span class="card__price">{{ item.price }}тг</span>
       </ion-card-content>
     </div>
   </ion-card>

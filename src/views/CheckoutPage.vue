@@ -14,7 +14,7 @@
         <template #footer-button>
           <base-black-button class="button" @click="$router.push('/order')">
             <icon-shopping-bag class="button__icon" slot="start" />
-            <ion-label class="button__label">Checkout</ion-label>
+            <ion-label class="button__label">Перейти к оплате</ion-label>
           </base-black-button>
         </template>
       </base-checkout-footer>

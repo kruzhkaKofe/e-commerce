@@ -1,7 +1,7 @@
 <template>
   <section class="contacts ion-padding">
     <base-section-heading class="contacts__heading"
-      >Contact us</base-section-heading
+      >Связь с нами</base-section-heading
     >
     <div class="contacts__list">
       <contacts-item

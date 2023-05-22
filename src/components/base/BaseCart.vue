@@ -18,7 +18,7 @@
         </div>
       </ion-content>
       <ion-footer class="footer">
-        <base-black-button class="result__button" @click="closeCart">
+        <base-black-button class="result__button close-button" @click="closeCart">
           <icon-shopping-bag class="result__icon" />
           Continue shopping
         </base-black-button>
@@ -40,11 +40,11 @@
           </transition-group>
         </div>
       </ion-content>
-      <ion-footer class="footer">
+      <ion-footer class="footer" @click="closeCart">
         <div class="check">
           <div class="check__description">
             Sub total
-            <span class="check__amount">${{ fullAmount }}</span>
+            <span class="check__amount">{{ fullAmount }}тг</span>
           </div>
           <p class="check__notice">
             *shipping charges, taxes and discount codes are calculated at the
@@ -53,10 +53,10 @@
         </div>
         <base-black-button
           class="result__button"
-          @click="$router.push('/checkout')"
+          @click="closeCart, $router.push('/checkout')"
         >
-          <icon-shopping-bag class="result__icon" />
-          Buy now
+          <icon-shopping-bag class="result__icon" @click="closeCart" />
+          Купить
         </base-black-button>
       </ion-footer>
     </template>

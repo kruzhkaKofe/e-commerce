@@ -1,9 +1,8 @@
 <template>
   <section class="sing-up">
-    <base-section-heading class="sing-up__heading">Sign up</base-section-heading>
+    <base-section-heading class="sing-up__heading">Зарегистрироваться</base-section-heading>
     <p class="sing-up__description">
-      Receive early access to new arrivals, sales, exclusive content, events and
-      much more!
+      Получите ранний доступ к новым поступлениям, распродажам, эксклюзивному контенту, событиям и многому другому!
     </p>
     <form @submit.prevent method="post" class="sing-up__form">
       <div class="ion-padding">
@@ -18,7 +17,7 @@
         />
       </div>
       <base-black-button class="sing-up__button" type="submit">
-        Submit
+        Подтвердить
         <icon-forward-arrow class="sing-up__button__icon" slot="end" />
       </base-black-button>
     </form>
