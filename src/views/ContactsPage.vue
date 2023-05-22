@@ -12,19 +12,19 @@ const contacts = [
   {
     id: "chat",
     icon: "assets/contactspage/message.svg",
-    text: "Need an ASAP answer? Contact us via chat, 24/7! For existing furniture orders, please call us.",
+    text: "Нужен СРОЧНЫЙ ответ? Свяжитесь с нами через чат, 24/7! Для существующих заказов мебели, пожалуйста, позвоните нам.",
     button_text: "Chat with us",
   },
   {
     id: "sms",
     icon: "assets/contactspage/letter.svg",
-    text: "You can text us at 800-309-2622 – or click on the “text us” link below on your mobile device. Please allow the system to acknowledge a simple greeting (even “Hi” will do!) before providing your question/order details. Consent is not required for any purchase. Message and data rates may apply. Text messaging may not be available via all carriers.",
+    text: "Вы можете отправить нам сообщение по номеру 8 800 555 35 35 или нажать на ссылку «Отправить нам сообщение» ниже на своем мобильном устройстве. Пожалуйста, позвольте системе подтвердить простое приветствие (подойдет даже «Привет!»), прежде чем предоставлять информацию о вашем вопросе/заказе. Согласие не требуется для любой покупки. Могут применяться тарифы на передачу сообщений и данных. Текстовые сообщения могут быть доступны не у всех операторов связи.",
     button_text: "Text us",
   },
   {
     id: "socials",
     icon: "assets/contactspage/twitter.svg",
-    text: "To send us a private or direct message, like @Open Fashion on Facebook or follow us on Twitter. We’ll get back to you ASAP. Please include your name, order number, and email address for a faster response!",
+    text: "Чтобы отправить нам личное или прямое сообщение, например, @Virdess в Telegram или подпишитесь на нас в Twitter. Мы свяжемся с вами как можно скорее. Пожалуйста, укажите свое имя, номер заказа и адрес электронной почты для более быстрого ответа!",
   },
 ];
 </script>

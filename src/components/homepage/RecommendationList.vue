@@ -1,6 +1,6 @@
 <template>
   <section class="recommendation">
-    <base-section-heading>Just for you</base-section-heading>
+    <base-section-heading>Специально для тебя</base-section-heading>
     <swiper
       class="recommendation__swiper"
       :slidesPerView="'auto'"

@@ -16,13 +16,13 @@
       <ion-input
         class="checkout__input"
         type="text"
-        placeholder="Add promo code"
+        placeholder="Ввести промокод"
         clear-input
       ></ion-input>
     </ion-item>
     <ion-item class="checkout__delivery checkout__action">
       <icon-delivery class="checkout__icon" />
-      <ion-label class="checkout__delivery-label">Delivery</ion-label>
+      <ion-label class="checkout__delivery-label">Доставка</ion-label>
       <ion-select
         class="checkout__select"
         interface="action-sheet"
@@ -30,16 +30,16 @@
         value="Free"
       >
         <ion-select-option class="checkout__select-option" value="Free"
-          >Free</ion-select-option
+          >Бесплатно</ion-select-option
         >
         <ion-select-option class="checkout__select-option" value="Express"
-          >Express(+5.99$)</ion-select-option
+          >Экспресс(+5.99тг)</ion-select-option
         >
       </ion-select>
     </ion-item>
   </template>
   <template v-else>
-    <div class="checkout_empty">No items in cart.</div>
+    <div class="checkout_empty">Корзина пуста.</div>
   </template>
 </template>
 
@@ -70,8 +70,8 @@ const decrement = (item) => {
 };
 
 const options = {
-  header: "Delivery",
-  subHeader: "Select delivery option"
+  header: "Доставка",
+  subHeader: "Выберите способ доставки"
 };
 </script>
 

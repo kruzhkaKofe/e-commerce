@@ -8,13 +8,13 @@
     >
     <swiper-slide v-for="n in 3" :key="n" class="cover__item">
       <div class="cover__title">
-        <span class="cover__title__item">Luxury</span>
-        <span class="cover__title__item">fashion</span>
-        <span class="cover__title__item">accessories</span>
+        <span class="cover__title__item">Люкс</span>
+        <span class="cover__title__item">Мода</span>
+        <span class="cover__title__item">Аксессуары</span>
       </div>
     </swiper-slide>
     <div class="cover__activities">
-      <ion-button class="cover__button">Explore collection</ion-button>
+      <ion-button class="cover__button" href="/october-collection">Исследуйте коллекцию</ion-button>
       <div class="cover__pagination"></div>
     </div>
   </swiper>
